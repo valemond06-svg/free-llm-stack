@@ -1,0 +1,18 @@
+[Unit]
+Description=antigravity-bridge (OpenAI -> Anthropic adapter for FreeLLMAPI)
+After=antigravity-proxy.service
+Requires=antigravity-proxy.service
+
+[Service]
+User=llm
+WorkingDirectory=/opt/free-llm-stack/bridge
+EnvironmentFile=/opt/free-llm-stack/.env
+Environment=BRIDGE_HOST=127.0.0.1
+Environment=BRIDGE_PORT=3005
+Environment=UPSTREAM_URL=http://127.0.0.1:8080
+ExecStart=/bin/sh -c 'UPSTREAM_API_KEY="$ANTIGRAVITY_PROXY_API_KEY" exec /usr/bin/node server.js'
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

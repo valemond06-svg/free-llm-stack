@@ -1,0 +1,23 @@
+# Secrets and runtime data: never commit
+.env
+.env.*
+!.env.example
+secrets/
+data/
+*.db
+*.db-wal
+*.db-shm
+*.bak
+.encryption-key
+accounts.json
+
+# Node / Python
+node_modules/
+__pycache__/
+*.pyc
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

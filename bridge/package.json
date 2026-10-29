@@ -1,0 +1,14 @@
+{
+  "name": "antigravity-bridge",
+  "version": "1.0.0",
+  "description": "OpenAI-compatible bridge in front of antigravity-claude-proxy, so FreeLLMAPI can use Antigravity models as a custom provider",
+  "type": "module",
+  "main": "server.js",
+  "bin": { "antigravity-bridge": "server.js" },
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test test/*.test.js"
+  },
+  "license": "MIT"
+}

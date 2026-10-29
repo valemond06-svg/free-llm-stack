@@ -1,0 +1,68 @@
+# Free LLM Stack: FreeLLMAPI + (optional) Antigravity proxy + OpenAI bridge.
+#
+#   docker compose up -d                          # FreeLLMAPI only
+#   docker compose --profile antigravity up -d    # + Antigravity proxy and bridge
+#
+# Every port is published on 127.0.0.1 only. Reach the dashboards from another
+# machine with an SSH tunnel or Tailscale (see docs/05-deploy-vps.md), never by
+# opening ports to the internet.
+
+services:
+  freellmapi:
+    image: ghcr.io/tashfeenahmed/freellmapi:${FREELLMAPI_VERSION:-latest}
+    env_file: .env
+    environment:
+      NODE_ENV: production
+      PORT: 3001
+    ports:
+      - "${HOST_BIND:-127.0.0.1}:${FREELLMAPI_PORT:-3001}:3001"
+    volumes:
+      # Bind mount (not a named volume) so scripts/curator.py can reach the DB
+      # at ./data/freellmapi/freeapi.db from the host.
+      - ./data/freellmapi:/app/server/data
+      # Optional declarative config (plaintext keys!), see config/freellmapi.config.example.json
+      - ./secrets:/secrets:ro
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3001/api/ping').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      start_period: 20s
+      retries: 3
+
+  antigravity-proxy:
+    profiles: ["antigravity"]
+    build: ./deploy/antigravity-proxy
+    environment:
+      HOST: 0.0.0.0
+      PORT: 8080
+      API_KEY: ${ANTIGRAVITY_PROXY_API_KEY:-}
+      WEBUI_PASSWORD: ${ANTIGRAVITY_WEBUI_PASSWORD:-}
+    ports:
+      # WebUI for adding Google accounts (OAuth). Localhost only.
+      - "127.0.0.1:${ANTIGRAVITY_PROXY_PORT:-8080}:8080"
+    volumes:
+      - ./data/antigravity:/root/.config/antigravity-proxy
+    restart: unless-stopped
+
+  antigravity-bridge:
+    profiles: ["antigravity"]
+    build: ./bridge
+    environment:
+      BRIDGE_HOST: 0.0.0.0
+      BRIDGE_PORT: 3005
+      UPSTREAM_URL: http://antigravity-proxy:8080
+      UPSTREAM_API_KEY: ${ANTIGRAVITY_PROXY_API_KEY}
+      BRIDGE_API_KEY: ${BRIDGE_API_KEY:-}
+    ports:
+      - "127.0.0.1:${BRIDGE_PORT:-3005}:3005"
+    depends_on:
+      - antigravity-proxy
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3005/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      retries: 3

@@ -1,0 +1,31 @@
+{
+  "admin": { "email": "tu@example.com", "password": "CAMBIAMI-almeno-8-caratteri" },
+  "keys": [
+    { "platform": "google",    "key": "AIza...progetto-1", "label": "google-1" },
+    { "platform": "google",    "key": "AIza...progetto-2", "label": "google-2" },
+    { "platform": "google",    "key": "AIza...progetto-3", "label": "google-3" },
+    { "platform": "google",    "key": "AIza...progetto-4", "label": "google-4" },
+    { "platform": "groq",      "key": "gsk_...1", "label": "groq-1" },
+    { "platform": "groq",      "key": "gsk_...2", "label": "groq-2" },
+    { "platform": "nvidia",    "key": "nvapi-...", "label": "nvidia-1" },
+    { "platform": "xkiro",     "key": "...", "label": "xkiro-1" },
+    { "platform": "unorouter", "key": "...", "label": "unorouter-1" },
+    { "platform": "zhipu",     "key": "...", "label": "zhipu-1" },
+    { "platform": "mistral",   "key": "...", "label": "mistral-1" },
+    { "platform": "cohere",    "key": "...", "label": "cohere-1" }
+  ],
+  "customProviders": [
+    {
+      "_comment": "Solo se usi Antigravity. Con Docker: http://antigravity-bridge:3005/v1 . Senza Docker: http://127.0.0.1:3005/v1",
+      "baseUrl": "http://antigravity-bridge:3005/v1",
+      "apiKey": "IL-TUO-BRIDGE_API_KEY",
+      "label": "Antigravity",
+      "models": [
+        { "model": "antigravity-claude-opus-4-6-thinking",   "displayName": "Claude Opus 4.6 Thinking (Antigravity)",   "supportsTools": true, "supportsVision": true, "contextWindow": 200000 },
+        { "model": "antigravity-claude-sonnet-4-6-thinking", "displayName": "Claude Sonnet 4.6 Thinking (Antigravity)", "supportsTools": true, "supportsVision": true, "contextWindow": 200000 },
+        { "model": "antigravity-gemini-3-pro",               "displayName": "Gemini 3 Pro (Antigravity)",               "supportsTools": true, "supportsVision": true, "contextWindow": 1000000 }
+      ]
+    }
+  ],
+  "routing": { "strategy": "priority" }
+}

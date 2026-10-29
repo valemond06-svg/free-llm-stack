@@ -1,0 +1,11 @@
+{
+  "_comment": "Antigravity IDE: pannello Agent -> menu '...' -> MCP Servers -> Manage MCP Servers -> View raw config. Unisci questo blocco dentro mcpServers. Desktop app: porta 31415; server/Docker: 3001.",
+  "mcpServers": {
+    "freellmapi": {
+      "serverUrl": "http://127.0.0.1:3001/mcp",
+      "headers": {
+        "Authorization": "Bearer freellmapi-LA-TUA-UNIFIED-KEY"
+      }
+    }
+  }
+}

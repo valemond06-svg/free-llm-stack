@@ -1,0 +1,21 @@
+# Only for running FreeLLMAPI from source WITHOUT Docker (Docker is the recommended path).
+# Prereq:  git clone https://github.com/tashfeenahmed/freellmapi.git /opt/freellmapi
+#          cd /opt/freellmapi && npm ci && npm run build
+#          put ENCRYPTION_KEY=... and PORT=3001 in /opt/freellmapi/.env
+[Unit]
+Description=FreeLLMAPI router
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=llm
+WorkingDirectory=/opt/freellmapi
+EnvironmentFile=/opt/freellmapi/.env
+Environment=NODE_ENV=production
+Environment=HOST=127.0.0.1
+ExecStart=/usr/bin/node server/dist/index.js
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

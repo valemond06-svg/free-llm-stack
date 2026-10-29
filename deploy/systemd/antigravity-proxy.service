@@ -1,0 +1,21 @@
+# Install:  sudo cp deploy/systemd/*.service /etc/systemd/system/
+#           sudo systemctl daemon-reload && sudo systemctl enable --now antigravity-proxy antigravity-bridge
+# Prereq:   npm install -g antigravity-claude-proxy@2.9.1
+# Edit User= and the EnvironmentFile path to match your machine.
+[Unit]
+Description=Antigravity Claude proxy (Anthropic API on top of Google Antigravity accounts)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=llm
+EnvironmentFile=/opt/free-llm-stack/.env
+Environment=HOST=127.0.0.1
+Environment=PORT=8080
+# The proxy reads API_KEY / WEBUI_PASSWORD; map them from .env names.
+ExecStart=/bin/sh -c 'API_KEY="$ANTIGRAVITY_PROXY_API_KEY" WEBUI_PASSWORD="$ANTIGRAVITY_WEBUI_PASSWORD" exec antigravity-claude-proxy start --log'
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

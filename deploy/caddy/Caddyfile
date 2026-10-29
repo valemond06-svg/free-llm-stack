@@ -1,0 +1,10 @@
+# OPTIONAL public HTTPS for FreeLLMAPI. Prefer Tailscale or an SSH tunnel.
+# FreeLLMAPI is single-user; the API is guarded only by the unified key and the
+# dashboard by its login. Install Caddy on the host, point a DNS A record at the VPS,
+# open 80/443 in ufw, then: sudo cp deploy/caddy/Caddyfile /etc/caddy/Caddyfile && sudo systemctl reload caddy
+llm.example.com {
+	encode zstd gzip
+	reverse_proxy 127.0.0.1:3001 {
+		flush_interval -1
+	}
+}
