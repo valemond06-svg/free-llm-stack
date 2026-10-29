@@ -84,8 +84,16 @@ def main():
     else:
         check("unified key tests", False, "set FREELLMAPI_API_KEY to test /v1 and /mcp", optional=True)
 
+    openai_ag = os.environ.get("ANTIGRAVITY_OPENAI_URL") or env.get("ANTIGRAVITY_OPENAI_URL")
+    if openai_ag:
+        # OpenAI-native Antigravity proxy (e.g. frieser/antigravity-proxy): no bridge in between.
+        st, body = http("GET", f"{openai_ag.rstrip('/')}/v1/models", timeout=8)
+        ids = [m["id"] for m in json.loads(body).get("data", [])] if st == 200 else []
+        check("Antigravity proxy (OpenAI) lists models", bool(ids), ", ".join(ids[:5]) if ids else f"HTTP {st}: {body[:120]}")
+        finish()
+
     uses_antigravity = bool(env.get("BRIDGE_API_KEY"))
-    st, body = http("GET", f"{args.proxy}/health", timeout=5)
+    st, body = http("GET", f"{args.proxy}/health", {"x-webui-password": env.get("ANTIGRAVITY_WEBUI_PASSWORD", "")}, timeout=5)
     check("Antigravity proxy", st == 200, f"HTTP {st}" if st else "not running", optional=not uses_antigravity)
     st, body = http("GET", f"{args.bridge}/health", timeout=8)
     check("antigravity-bridge -> proxy", st == 200, body[:120] if st else "not running", optional=not uses_antigravity)
@@ -94,7 +102,10 @@ def main():
         ids = [m["id"] for m in json.loads(body).get("data", [])] if st == 200 else []
         check("bridge lists Antigravity models", st == 200 and bool(ids),
               ", ".join(ids[:6]) if ids else f"HTTP {st}: {body[:120]} (no Google account added yet?)")
+    finish()
 
+
+def finish():
     failed = [r for r in results if not r[1] and not r[2]]
     print("\nAll good." if not failed else f"\n{len(failed)} check(s) failed - see docs/07-troubleshooting.md")
     sys.exit(1 if failed else 0)

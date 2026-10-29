@@ -6,12 +6,12 @@
 
 | Pos | Modello | Provider | Note |
 |---|---|---|---|
-| 1–3 | Claude Opus 4.6 Thinking → Claude Sonnet 4.6 Thinking → Gemini 3 Pro | Antigravity (bridge) | Solo se Antigravity è attivo; altrimenti vengono saltati. |
+| 1–3 | Claude Opus 4.6 Thinking → Claude Sonnet 4.6 Thinking → Gemini 3 Flash | Antigravity | Solo se Antigravity è attivo. Con account gratuiti Sonnet dà `SUBSCRIPTION_REQUIRED` e viene saltato. **Non mettere Gemini 3 Pro**: risponde HTTP 200 con il testo "no longer available", un falso successo che blocca il fallback. |
 | 4 | Nemotron 3 Ultra 550B | NVIDIA | Il più affidabile. |
 | 5–6 | Qwen3.8 Max → Qwen3.8 Omni Flash | xKiro | IQ top, 1M contesto; Omni ha la visione. |
 | 7–9 | Gemini 3.7 → 3.6 → 3.5 Flash | Google | Veloci, quota per modello. |
 | 10 | Qwen3.8 27B | Groq | Velocità LPU. |
-| 11–12 | GLM 5.3 → GLM 5.3 Flash | UnoRouter | IQ alto ma 1 RPM: **mai** nelle prime posizioni. |
+| 11–12 | GLM 5.3 → GLM 5.3 Flash | UnoRouter | IQ alto ma 1 RPM: **mai** nelle prime posizioni. Solo se hai dato il consenso provider (vedi [02](02-provider-e-account.md)); altrimenti disattiva le key UnoRouter e vengono saltati. |
 | 13–14 | Qwen3.7 Max → Qwen3.6 Plus | xKiro | Stessa quota di xKiro. |
 | 15 | Poolside Laguna XS 2.1 | NVIDIA | Specialista coding. |
 | 16 | GLM-4.7 Flash | Zhipu | Lento, riserva. |

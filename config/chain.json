@@ -1,40 +1,184 @@
 {
-  "_comment": "Catena 'auto' consigliata (ottobre 2026), dal setup di riferimento. Ordine = priorità. Usata da: python scripts/curator.py apply. Le regole sotto sono usate da: python scripts/curator.py auto.",
+  "_comment": "Catena 'auto' consigliata (ottobre 2026), dal setup di riferimento. Ordine = priorità. Usata da: python scripts/curator.py apply. Le regole sotto sono usate da: python scripts/curator.py auto. alt_ids = stesso modello con i nomi di un altro proxy (es. frieser/antigravity-proxy espone gli id senza prefisso).",
   "chain": [
-    { "platform": "custom",    "model_id": "antigravity-claude-opus-4-6-thinking",   "why": "Ragionamento migliore. Solo se il bridge Antigravity è attivo." },
-    { "platform": "custom",    "model_id": "antigravity-claude-sonnet-4-6-thinking", "why": "Quasi Opus, più veloce." },
-    { "platform": "custom",    "model_id": "antigravity-gemini-3-pro",               "why": "Contesto enorme, visione." },
-    { "platform": "nvidia",    "model_id": "nvidia/nemotron-3-ultra-550b-a55b",      "why": "Il più affidabile nei nostri log (85% successi), 40 RPM, 1M ctx. Lento (~16s)." },
-    { "platform": "xkiro",     "model_id": "qwen/qwen3.8-max:free",                  "why": "Intelligenza top, 1M ctx, 30M token/mese. Va spesso in 'high demand'." },
-    { "platform": "xkiro",     "model_id": "qwen/qwen3.8-omni-flash:free",           "why": "Visione + tool, 1M ctx." },
-    { "platform": "google",    "model_id": "gemini-3.7-flash",                       "why": "Il più veloce dei forti (~6s). Quota per progetto: servono più account." },
-    { "platform": "google",    "model_id": "gemini-3.6-flash",                       "why": "Stessa famiglia, quota separata per modello." },
-    { "platform": "google",    "model_id": "gemini-3.5-flash",                       "why": "Idem." },
-    { "platform": "groq",      "model_id": "qwen/qwen3.8-27b",                       "why": "Velocità LPU per tool call in serie." },
-    { "platform": "unorouter", "model_id": "glm-5.3:free",                           "why": "IQ altissimo ma 1 RPM: tenerlo dopo la posizione 6." },
-    { "platform": "unorouter", "model_id": "glm-5.3-flash:free",                     "why": "Idem, 1 RPM." },
-    { "platform": "xkiro",     "model_id": "qwen/qwen3.7-max:free",                  "why": "Generazione precedente, stessa quota xKiro." },
-    { "platform": "xkiro",     "model_id": "qwen/qwen3.6-plus:free",                 "why": "Idem." },
-    { "platform": "nvidia",    "model_id": "poolside/laguna-xs-2.1",                 "why": "Specialista coding, 40 RPM." },
-    { "platform": "zhipu",     "model_id": "glm-4.7-flash",                          "why": "Gratis e illimitato-ish, ma lento e spesso sovraccarico." },
-    { "platform": "google",    "model_id": "gemini-flash-latest",                    "why": "Alias che segue l'ultimo Flash." },
-    { "platform": "google",    "model_id": "gemini-3.8-flash",                       "why": "Forte ma lento: in fondo." },
-    { "platform": "groq",      "model_id": "openai/gpt-oss-120b",                    "why": "Veloce per script e file." },
-    { "platform": "xkiro",     "model_id": "mistralai/mistral-medium-3.5",           "why": "Visione + tool." },
-    { "platform": "mistral",   "model_id": "mistral-code-latest",                    "why": "100M token/mese, 2 RPM: chiusura catena." },
-    { "platform": "cohere",    "model_id": "command-a-reasoning-08-2025",            "why": "Ultima spiaggia, 256K ctx." }
+    {
+      "platform": "custom",
+      "model_id": "antigravity-claude-opus-4-6-thinking",
+      "why": "Ragionamento migliore. Solo se il bridge Antigravity è attivo.",
+      "alt_ids": [
+        "claude-opus-4-6-thinking"
+      ]
+    },
+    {
+      "platform": "custom",
+      "model_id": "antigravity-claude-sonnet-4-6-thinking",
+      "why": "Quasi Opus, più veloce. Su account Antigravity gratuiti dà SUBSCRIPTION_REQUIRED: viene saltato.",
+      "alt_ids": [
+        "claude-sonnet-4-6-thinking",
+        "claude-sonnet-4-6"
+      ]
+    },
+    {
+      "platform": "custom",
+      "model_id": "antigravity-gemini-3-flash",
+      "why": "Veloce, visione. NON usare gemini-3-pro: su account gratuiti risponde 200 con il testo 'no longer available' (falso successo, il fallback non scatta).",
+      "alt_ids": [
+        "gemini-3-flash"
+      ]
+    },
+    {
+      "platform": "nvidia",
+      "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+      "why": "Il più affidabile nei nostri log (85% successi), 40 RPM, 1M ctx. Lento (~16s)."
+    },
+    {
+      "platform": "xkiro",
+      "model_id": "qwen/qwen3.8-max:free",
+      "why": "Intelligenza top, 1M ctx, 30M token/mese. Va spesso in 'high demand'."
+    },
+    {
+      "platform": "xkiro",
+      "model_id": "qwen/qwen3.8-omni-flash:free",
+      "why": "Visione + tool, 1M ctx."
+    },
+    {
+      "platform": "google",
+      "model_id": "gemini-3.7-flash",
+      "why": "Il più veloce dei forti (~6s). Quota per progetto: servono più account."
+    },
+    {
+      "platform": "google",
+      "model_id": "gemini-3.6-flash",
+      "why": "Stessa famiglia, quota separata per modello."
+    },
+    {
+      "platform": "google",
+      "model_id": "gemini-3.5-flash",
+      "why": "Idem."
+    },
+    {
+      "platform": "groq",
+      "model_id": "qwen/qwen3.8-27b",
+      "why": "Velocità LPU per tool call in serie."
+    },
+    {
+      "platform": "unorouter",
+      "model_id": "glm-5.3:free",
+      "why": "IQ altissimo ma 1 RPM: tenerlo dopo la posizione 6."
+    },
+    {
+      "platform": "unorouter",
+      "model_id": "glm-5.3-flash:free",
+      "why": "Idem, 1 RPM."
+    },
+    {
+      "platform": "xkiro",
+      "model_id": "qwen/qwen3.7-max:free",
+      "why": "Generazione precedente, stessa quota xKiro."
+    },
+    {
+      "platform": "xkiro",
+      "model_id": "qwen/qwen3.6-plus:free",
+      "why": "Idem."
+    },
+    {
+      "platform": "nvidia",
+      "model_id": "poolside/laguna-xs-2.1",
+      "why": "Specialista coding, 40 RPM."
+    },
+    {
+      "platform": "zhipu",
+      "model_id": "glm-4.7-flash",
+      "why": "Gratis e illimitato-ish, ma lento e spesso sovraccarico."
+    },
+    {
+      "platform": "google",
+      "model_id": "gemini-flash-latest",
+      "why": "Alias che segue l'ultimo Flash."
+    },
+    {
+      "platform": "google",
+      "model_id": "gemini-3.8-flash",
+      "why": "Forte ma lento: in fondo."
+    },
+    {
+      "platform": "groq",
+      "model_id": "openai/gpt-oss-120b",
+      "why": "Veloce per script e file."
+    },
+    {
+      "platform": "xkiro",
+      "model_id": "mistralai/mistral-medium-3.5",
+      "why": "Visione + tool."
+    },
+    {
+      "platform": "mistral",
+      "model_id": "mistral-code-latest",
+      "why": "100M token/mese, 2 RPM: chiusura catena."
+    },
+    {
+      "platform": "cohere",
+      "model_id": "command-a-reasoning-08-2025",
+      "why": "Ultima spiaggia, 256K ctx."
+    }
   ],
   "rules": {
     "pinned_top": [
-      { "platform": "custom", "model_id": "antigravity-claude-opus-4-6-thinking" },
-      { "platform": "custom", "model_id": "antigravity-claude-sonnet-4-6-thinking" },
-      { "platform": "custom", "model_id": "antigravity-gemini-3-pro" }
+      {
+        "platform": "custom",
+        "model_id": "antigravity-claude-opus-4-6-thinking",
+        "alt_ids": [
+          "claude-opus-4-6-thinking"
+        ]
+      },
+      {
+        "platform": "custom",
+        "model_id": "antigravity-claude-sonnet-4-6-thinking",
+        "alt_ids": [
+          "claude-sonnet-4-6-thinking",
+          "claude-sonnet-4-6"
+        ]
+      },
+      {
+        "platform": "custom",
+        "model_id": "antigravity-gemini-3-flash",
+        "alt_ids": [
+          "gemini-3-flash"
+        ]
+      }
     ],
-    "non_chat_patterns": ["guard", "safety", "safeguard", "moderation", "parse", "translate", "\\bfim\\b", "tts", "whisper", "voxtral", "embed", "robotics", "calibration", "rerank", "ocr"],
-    "weak_variant_patterns": ["flash-lite", "\\blite\\b", "ministral", "\\b(3|8|14)b\\b", "gpt-oss-20b", "tiny"],
+    "non_chat_patterns": [
+      "guard",
+      "safety",
+      "safeguard",
+      "moderation",
+      "parse",
+      "translate",
+      "\\bfim\\b",
+      "tts",
+      "whisper",
+      "voxtral",
+      "embed",
+      "robotics",
+      "calibration",
+      "rerank",
+      "ocr"
+    ],
+    "weak_variant_patterns": [
+      "flash-lite",
+      "\\blite\\b",
+      "ministral",
+      "\\b(3|8|14)b\\b",
+      "gpt-oss-20b",
+      "tiny"
+    ],
     "max_intelligence_rank": 90,
     "max_models_per_provider": 4,
-    "weights": { "intelligence": 0.55, "reliability": 0.25, "speed": 0.20 },
+    "weights": {
+      "intelligence": 0.55,
+      "reliability": 0.25,
+      "speed": 0.2
+    },
     "default_reliability": 70,
     "min_samples_for_reliability": 5,
     "low_rpm": 2,

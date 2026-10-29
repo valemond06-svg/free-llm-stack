@@ -60,10 +60,15 @@ Per ogni provider scelto: dai il link da `docs/02-provider-e-account.md`, l'uten
 incolla nella dashboard (Keys). Ricorda le trappole note: Google senza fatturazione e key da
 progetti diversi; **UnoRouter richiede di dare il consenso ai provider upstream** nella sua
 dashboard; Cohere è una trial key.
+**UnoRouter**: i suoi modelli `:free` richiedono un consenso legale ai provider upstream, che dichiarano di
+conservare o usare i prompt per training. Spiegalo e chiedi un sì esplicito **prima** di eseguire
+`scripts/unorouter_consent.py --grant`. Se l'utente rifiuta, disattiva le key UnoRouter (dashboard) e vai avanti.
 Verifica: pallini verdi in Keys; `FREELLMAPI_API_KEY=… python scripts/doctor.py --url <URL>`.
 
 ## Fase 4 · Antigravity (solo se confermato)
 
+- Esistono due proxy: `antigravity-claude-proxy` (API Anthropic, serve `bridge/`) oppure
+  `frieser/antigravity-proxy` (API OpenAI, niente bridge; vedi `docs/04`, va legato a 127.0.0.1).
 - PC: `.env` con i tre segreti generati, `npm i -g pm2 antigravity-claude-proxy@2.9.1`,
   `pm2 start deploy/pm2/ecosystem.config.cjs`, autostart (Windows: `deploy/windows/install-autostart.ps1`;
   macOS/Linux: `pm2 startup`).

@@ -82,7 +82,13 @@ def usable_platforms(conn):
     return {r["platform"] for r in rows}
 
 
-def find_model(conn, platform, model_id):
+def find_model(conn, platform, model_id, alt_ids=()):
+    """First match among model_id and its alternatives (same model under another proxy's naming)."""
+    for mid in (model_id, *alt_ids):
+        row = conn.execute("SELECT * FROM models WHERE platform = ? AND model_id = ? AND enabled = 1 ORDER BY id LIMIT 1",
+                           (platform, mid)).fetchone()
+        if row:
+            return row
     return conn.execute("SELECT * FROM models WHERE platform = ? AND model_id = ? ORDER BY id LIMIT 1",
                         (platform, model_id)).fetchone()
 
@@ -145,7 +151,7 @@ def cmd_apply(conn, args):
     usable = usable_platforms(conn)
     ids, missing = [], []
     for entry in chain["chain"]:
-        m = find_model(conn, entry["platform"], entry["model_id"])
+        m = find_model(conn, entry["platform"], entry["model_id"], entry.get("alt_ids", ()))
         if not m:
             missing.append(entry)
             continue
@@ -185,7 +191,7 @@ def cmd_auto(conn, args):
     rel = reliability(conn)
     patterns = [re.compile(p, re.I) for p in rules["non_chat_patterns"]]
     pinned = rules.get("pinned_top", [])
-    pinned_keys = {(p["platform"], p["model_id"]) for p in pinned}
+    pinned_keys = {(p["platform"], mid) for p in pinned for mid in (p["model_id"], *p.get("alt_ids", ()))}
 
     rejected, candidates = [], []
     for m in conn.execute("SELECT * FROM models").fetchall():
@@ -250,7 +256,7 @@ def cmd_auto(conn, args):
 
     pinned_ids = []
     for p in pinned:
-        m = find_model(conn, p["platform"], p["model_id"])
+        m = find_model(conn, p["platform"], p["model_id"], p.get("alt_ids", ()))
         if m and p["platform"] in usable:
             pinned_ids.append(m["id"])
 

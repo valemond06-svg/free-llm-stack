@@ -13,6 +13,8 @@ export function loadConfig(env = process.env) {
     port: Number(env.BRIDGE_PORT || 3005),
     upstream: (env.UPSTREAM_URL || 'http://127.0.0.1:8080').replace(/\/+$/, ''),
     upstreamKey: env.UPSTREAM_API_KEY || '',
+    // The proxy guards /health behind its WebUI password when one is set.
+    upstreamWebuiPassword: env.UPSTREAM_WEBUI_PASSWORD || '',
     bridgeKey: env.BRIDGE_API_KEY || '',
     prefix: env.MODEL_PREFIX ?? 'antigravity-',
     defaultMaxTokens: Number(env.DEFAULT_MAX_TOKENS || 16384),
@@ -335,7 +337,10 @@ export function createServer(cfg = loadConfig()) {
     try {
       if (req.method === 'GET' && url.pathname === '/health') {
         let upstream = 'down';
-        try { upstream = (await fetch(`${cfg.upstream}/health`, { signal: AbortSignal.timeout(3000) })).ok ? 'ok' : 'error'; } catch {}
+        try {
+          const headers = cfg.upstreamWebuiPassword ? { 'x-webui-password': cfg.upstreamWebuiPassword } : {};
+          upstream = (await fetch(`${cfg.upstream}/health`, { headers, signal: AbortSignal.timeout(3000) })).ok ? 'ok' : 'error';
+        } catch {}
         return sendJson(res, upstream === 'ok' ? 200 : 503, { status: upstream === 'ok' ? 'ok' : 'degraded', upstream, upstreamUrl: cfg.upstream });
       }
       if (!authorized(req, cfg)) return openAIError(res, 401, 'invalid bridge API key', 'authentication_error');
@@ -349,7 +354,9 @@ export function createServer(cfg = loadConfig()) {
   });
 }
 
-if (import.meta.url === pathToFileURL(process.argv[1] || '').href) {
+// pm2 runs scripts through its own container, so argv[1] is not this file there.
+const entry = process.env.pm_exec_path || process.argv[1] || '';
+if (import.meta.url === pathToFileURL(entry).href) {
   const cfg = loadConfig();
   createServer(cfg).listen(cfg.port, cfg.host, () => {
     console.log(`antigravity-bridge listening on http://${cfg.host}:${cfg.port} -> ${cfg.upstream}`);

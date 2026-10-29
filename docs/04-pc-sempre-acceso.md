@@ -12,7 +12,10 @@ Scegli questa strada se il PC dove lavori resta acceso. Niente Docker necessario
 5. Pagina **Keys** → **Agent compatibility** → attiva **MCP**.
 6. Aggiungi le key dei provider ([02](02-provider-e-account.md)).
 
-L'app si aggiorna da sola e fa un backup del DB prima di ogni update. I dati stanno in
+Se usi lo **zip portatile** invece dell'installer, non c'è avvio al login: crea un collegamento a
+`FreeLLMAPI.exe` in `shell:startup` (Win+R → `shell:startup`). Lo zip non si aggiorna da solo.
+
+L'app (installer) si aggiorna da sola e fa un backup del DB prima di ogni update. I dati stanno in
 `%APPDATA%\FreeLLMAPI\` · `~/Library/Application Support/FreeLLMAPI/` · `~/.config/FreeLLMAPI/`.
 
 Porta: **31415** (non 3001). Usala in tutti i comandi: `--url http://127.0.0.1:31415`.
@@ -38,8 +41,29 @@ Poi in FreeLLMAPI: **Keys → Custom endpoint**
 - Base URL: `http://127.0.0.1:3005/v1`
 - API key: il valore di `BRIDGE_API_KEY`
 - Modelli: `antigravity-claude-opus-4-6-thinking`, `antigravity-claude-sonnet-4-6-thinking`,
-  `antigravity-gemini-3-pro` (o quelli che `curl -H "Authorization: Bearer $BRIDGE_API_KEY" http://127.0.0.1:3005/v1/models` elenca).
+  `antigravity-gemini-3-flash` (non gemini-3-pro: falso 200; o quelli che `curl -H "Authorization: Bearer $BRIDGE_API_KEY" http://127.0.0.1:3005/v1/models` elenca).
   Marca **Tools** e **Vision**.
+
+### Alternativa senza bridge: frieser/antigravity-proxy (usata sul PC di riferimento)
+
+[frieser/antigravity-proxy](https://github.com/frieser/antigravity-proxy) (Bun) parla già OpenAI, quindi
+FreeLLMAPI lo usa direttamente, senza `bridge/`. Ruota più account Google e rinnova i token da solo.
+
+```bash
+git clone https://github.com/frieser/antigravity-proxy ~/.antigravity-proxy && cd ~/.antigravity-proxy
+bun install        # poi aggiungi gli account dalla sua dashboard: http://localhost:3000
+```
+
+1. **Importante**: di default ascolta su `0.0.0.0` (account e dashboard visibili a tutta la LAN, senza
+   password). In `src/server.ts` cambia `hostname: "0.0.0.0",` in `hostname: process.env.HOST || "127.0.0.1",`.
+2. Avvio permanente: `pm2 start src/server.ts --name antigravity-proxy --interpreter <percorso di bun> --cwd ~/.antigravity-proxy && pm2 save`.
+3. FreeLLMAPI → Keys → Custom endpoint `http://127.0.0.1:3000/v1`, modelli con i suoi id **senza prefisso**:
+   `claude-opus-4-6-thinking`, `gemini-3-flash` (Tools + Vision). `config/chain.json` li riconosce tramite `alt_ids`.
+4. Verifica: `ANTIGRAVITY_OPENAI_URL=http://127.0.0.1:3000 python scripts/doctor.py --url http://127.0.0.1:31415 --chat`
+   (imposta `ANTIGRAVITY_OPENAI_URL` come variabile utente per non ripeterlo).
+
+Con account gratuiti, nel setup di riferimento funzionano **Claude Opus 4.6 Thinking** e **Gemini 3 Flash**.
+Sonnet 4.6 e Gemini 2.5 Pro danno `SUBSCRIPTION_REQUIRED`. Gemini 3 Pro dà un falso 200: non usarlo.
 
 ## 3. Catena e verifica
 

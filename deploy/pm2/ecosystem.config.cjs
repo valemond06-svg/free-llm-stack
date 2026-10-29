@@ -23,7 +23,7 @@ module.exports = {
       name: 'antigravity-proxy',
       // The CLI's `start --log` just runs this file; pm2 supervises it directly.
       script: path.join(require('node:child_process').execSync('npm root -g').toString().trim(), 'antigravity-claude-proxy', 'src', 'index.js'),
-      env: { HOST: '127.0.0.1', PORT: '8080', API_KEY: env.ANTIGRAVITY_PROXY_API_KEY || '', WEBUI_PASSWORD: env.ANTIGRAVITY_WEBUI_PASSWORD || '' },
+      env: { HOST: '127.0.0.1', PORT: env.ANTIGRAVITY_PROXY_PORT || '8080', API_KEY: env.ANTIGRAVITY_PROXY_API_KEY || '', WEBUI_PASSWORD: env.ANTIGRAVITY_WEBUI_PASSWORD || '' },
       autorestart: true,
     },
     {
@@ -31,9 +31,10 @@ module.exports = {
       script: path.join(root, 'bridge', 'server.js'),
       env: {
         BRIDGE_HOST: '127.0.0.1',
-        BRIDGE_PORT: '3005',
-        UPSTREAM_URL: 'http://127.0.0.1:8080',
+        BRIDGE_PORT: env.BRIDGE_PORT || '3005',
+        UPSTREAM_URL: `http://127.0.0.1:${env.ANTIGRAVITY_PROXY_PORT || '8080'}`,
         UPSTREAM_API_KEY: env.ANTIGRAVITY_PROXY_API_KEY || '',
+        UPSTREAM_WEBUI_PASSWORD: env.ANTIGRAVITY_WEBUI_PASSWORD || '',
         BRIDGE_API_KEY: env.BRIDGE_API_KEY || '',
       },
       autorestart: true,

@@ -12,7 +12,11 @@ Poi `python scripts/curator.py report`.
 | Dopo un update tornano centinaia di modelli nella catena | `auto_include_new_models` riattivato | Rilancia `curator.py apply`/`auto`. |
 | Google: `429 Resource has been exhausted` | Quota del progetto finita | Più key da progetti diversi; la catena passa comunque al prossimo. |
 | Google: `402 prepayment credits are depleted` | Progetto con fatturazione | Usa key da progetti **senza** billing. |
-| UnoRouter: `403 needs your consent for these providers` | Consenso provider non dato | Dashboard UnoRouter → dai il consenso ai provider upstream dei modelli `:free`. |
+| UnoRouter: `403 consent_required` / `needs your consent for these providers` | Consenso provider non dato | Decisione dell'utente (i provider conservano/usano i prompt): o `scripts/unorouter_consent.py --grant` dopo il suo ok esplicito, o disattiva le key UnoRouter e rilancia `curator.py apply`. |
+| Antigravity: `SUBSCRIPTION_REQUIRED` (403) | Modello non incluso negli account gratuiti (es. Sonnet 4.6, Gemini 2.5 Pro) | Disattiva quel modello custom in FreeLLMAPI; usa Opus 4.6 Thinking / Gemini 3 Flash. |
+| Antigravity Gemini 3 Pro risponde "no longer available" con HTTP 200 | Falso successo: il fallback non scatta | Togli Gemini 3 Pro dalla catena. |
+| MCP `freellmapi` ✗ dopo ogni riavvio del PC | App portatile (zip) senza avvio automatico | Collegamento a `FreeLLMAPI.exe` in `shell:startup`. |
+| Bridge sotto pm2 non ascolta (nessun "listening" nei log) | Versione vecchia di `bridge/server.js` | Aggiorna il repo: ora riconosce l'avvio da pm2. |
 | xKiro: `temporarily unavailable due to high demand` | Sovraccarico lato loro | Niente da fare; il fallback lo gestisce. |
 | Zhipu: `429` (messaggio in cinese) | Sovraccarico / rate limit | Tenerlo in basso nella catena. |
 | NVIDIA: `stream stalled 90000ms` | Modello molto lento | Normale ogni tanto; se frequente, abbassa Nemotron nella catena. |
