@@ -241,6 +241,10 @@ def cmd_auto(conn, args):
         r_score, samples = rel.get((m["platform"], m["model_id"]), (None, 0))
         if samples < rules["min_samples_for_reliability"]:
             r_score = rules["default_reliability"]
+        elif r_score < rules.get("min_reliability", 0):
+            # Misurato e quasi sempre in errore: l'intelligenza non lo salva (ogni tentativo fallito è latenza).
+            rejected.append((m, f"reliability {r_score:.0f}% < {rules['min_reliability']}% ({samples} samples)"))
+            continue
         score = i_score * w["intelligence"] + r_score * w["reliability"] + s_score * w["speed"]
         ctx = m["context_window"] or 0
         score += 8 if ctx >= 1_000_000 else 5 if ctx >= 256_000 else 0

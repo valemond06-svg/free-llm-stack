@@ -183,6 +183,7 @@
     "min_samples_for_reliability": 5,
     "low_rpm": 2,
     "slow_speed_score": 10,
-    "slow_min_position": 6
+    "slow_min_position": 6,
+    "min_reliability": 25
   }
 }
