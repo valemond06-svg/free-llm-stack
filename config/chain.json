@@ -4,122 +4,149 @@
     {
       "platform": "custom",
       "model_id": "antigravity-claude-opus-4-6-thinking",
-      "why": "Ragionamento migliore. Solo se il bridge Antigravity è attivo.",
       "alt_ids": [
         "claude-opus-4-6-thinking"
-      ]
-    },
-    {
-      "platform": "custom",
-      "model_id": "antigravity-claude-sonnet-4-6-thinking",
-      "why": "Quasi Opus, più veloce. Su account Antigravity gratuiti dà SUBSCRIPTION_REQUIRED: viene saltato.",
-      "alt_ids": [
-        "claude-sonnet-4-6-thinking",
-        "claude-sonnet-4-6"
-      ]
+      ],
+      "why": "Ragionamento migliore, Antigravity."
     },
     {
       "platform": "custom",
       "model_id": "antigravity-gemini-3-flash",
-      "why": "Veloce, visione. NON usare gemini-3-pro: su account gratuiti risponde 200 con il testo 'no longer available' (falso successo, il fallback non scatta).",
       "alt_ids": [
         "gemini-3-flash"
-      ]
-    },
-    {
-      "platform": "nvidia",
-      "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
-      "why": "Il più affidabile nei nostri log (85% successi), 40 RPM, 1M ctx. Lento (~16s)."
-    },
-    {
-      "platform": "xkiro",
-      "model_id": "qwen/qwen3.8-max:free",
-      "why": "Intelligenza top, 1M ctx, 30M token/mese. Va spesso in 'high demand'."
-    },
-    {
-      "platform": "xkiro",
-      "model_id": "qwen/qwen3.8-omni-flash:free",
-      "why": "Visione + tool, 1M ctx."
-    },
-    {
-      "platform": "google",
-      "model_id": "gemini-3.7-flash",
-      "why": "Il più veloce dei forti (~6s). Quota per progetto: servono più account."
-    },
-    {
-      "platform": "google",
-      "model_id": "gemini-3.6-flash",
-      "why": "Stessa famiglia, quota separata per modello."
-    },
-    {
-      "platform": "google",
-      "model_id": "gemini-3.5-flash",
-      "why": "Idem."
+      ],
+      "why": "Forte e veloce (1,4 s), Antigravity."
     },
     {
       "platform": "groq",
       "model_id": "qwen/qwen3.8-27b",
-      "why": "Velocità LPU per tool call in serie."
-    },
-    {
-      "platform": "unorouter",
-      "model_id": "glm-5.3:free",
-      "why": "IQ altissimo ma 1 RPM: tenerlo dopo la posizione 6."
-    },
-    {
-      "platform": "unorouter",
-      "model_id": "glm-5.3-flash:free",
-      "why": "Idem, 1 RPM."
+      "why": "Primo non Antigravity: 1 s, circa 435 tok/s, 4 key. Regge il failover."
     },
     {
       "platform": "xkiro",
-      "model_id": "qwen/qwen3.7-max:free",
-      "why": "Generazione precedente, stessa quota xKiro."
+      "model_id": "qwen/qwen3.8-max:free",
+      "why": "Intelligenza top, 1M ctx."
+    },
+    {
+      "platform": "google",
+      "model_id": "gemini-3.6-flash",
+      "why": "Quota separata."
+    },
+    {
+      "platform": "google",
+      "model_id": "gemini-3.5-flash",
+      "why": "Quota separata, 5 rpm."
     },
     {
       "platform": "xkiro",
-      "model_id": "qwen/qwen3.6-plus:free",
-      "why": "Idem."
+      "model_id": "qwen/qwen3.8-omni-flash:free",
+      "why": "Visione e tool, 503 intermittenti."
+    },
+
+    {
+      "platform": "cloudflare",
+      "model_id": "@cf/qwen/qwen3.8-27b",
+      "why": "Stesso modello Groq su infrastruttura diversa."
+    },
+    {
+      "platform": "nvidia",
+      "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+      "why": "Affidabile ma lento sotto carico: dopo i veloci."
+    },
+    {
+      "platform": "kilo",
+      "model_id": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "why": "Riserva indipendente."
+    },
+    {
+      "platform": "xkiro",
+      "model_id": "qwen/qwen3.7-max:free"
+    },
+    {
+      "platform": "xkiro",
+      "model_id": "qwen/qwen3.6-max-preview:free"
+    },
+    {
+      "platform": "xkiro",
+      "model_id": "qwen/qwen3.6-plus:free"
     },
     {
       "platform": "nvidia",
       "model_id": "poolside/laguna-xs-2.1",
-      "why": "Specialista coding, 40 RPM."
+      "why": "Velocissimo (0,6 s)."
+    },
+    {
+      "platform": "xkiro",
+      "model_id": "mistralai/mistral-medium-3.5"
+    },
+    {
+      "platform": "groq",
+      "model_id": "openai/gpt-oss-120b"
+    },
+    {
+      "platform": "cohere",
+      "model_id": "command-a-plus-05-2026",
+      "why": "Trial key."
     },
     {
       "platform": "zhipu",
       "model_id": "glm-4.7-flash",
-      "why": "Gratis e illimitato-ish, ma lento e spesso sovraccarico."
+      "why": "Lento, riserva."
     },
     {
-      "platform": "google",
-      "model_id": "gemini-flash-latest",
-      "why": "Alias che segue l'ultimo Flash."
+      "platform": "electronhub",
+      "model_id": "qwen3.8-flash",
+      "why": "Credito 0,25 $ a settimana."
     },
     {
-      "platform": "google",
-      "model_id": "gemini-3.8-flash",
-      "why": "Forte ma lento: in fondo."
+      "platform": "electronhub",
+      "model_id": "gpt-5.6-luna",
+      "why": "Credito settimanale."
     },
     {
-      "platform": "groq",
-      "model_id": "openai/gpt-oss-120b",
-      "why": "Veloce per script e file."
+      "platform": "electronhub",
+      "model_id": "minimax-m3",
+      "why": "Credito settimanale."
     },
     {
-      "platform": "xkiro",
-      "model_id": "mistralai/mistral-medium-3.5",
-      "why": "Visione + tool."
+      "platform": "electronhub",
+      "model_id": "deepseek-v4-flash",
+      "why": "Credito settimanale."
+    },
+    {
+      "platform": "electronhub",
+      "model_id": "laguna-s-2.1",
+      "why": "Credito settimanale."
+    },
+    {
+      "platform": "cohere",
+      "model_id": "north-mini-code-1-0",
+      "why": "Trial key, 33 al giorno."
     },
     {
       "platform": "mistral",
       "model_id": "mistral-code-latest",
-      "why": "100M token/mese, 2 RPM: chiusura catena."
+      "why": "2 rpm."
     },
     {
       "platform": "cohere",
       "model_id": "command-a-reasoning-08-2025",
-      "why": "Ultima spiaggia, 256K ctx."
+      "why": "Solo non-stream."
+    },
+    {
+      "platform": "google",
+      "model_id": "gemini-3.7-flash",
+      "why": "Timeout di 60 s osservati: in coda per non consumare il budget del fallback."
+    },
+    {
+      "platform": "google",
+      "model_id": "gemini-3.8-flash",
+      "why": "Timeout di 60 s osservati: in coda per non consumare il budget del fallback."
+    },
+    {
+      "platform": "google",
+      "model_id": "gemini-flash-latest",
+      "why": "Timeout di 60 s osservati: in coda per non consumare il budget del fallback."
     }
   ],
   "rules": {
@@ -170,7 +197,9 @@
       "ministral",
       "\\b(3|8|14)b\\b",
       "gpt-oss-20b",
-      "tiny"
+      "tiny",
+      "note-preview",
+      "dots"
     ],
     "max_intelligence_rank": 90,
     "max_models_per_provider": 4,

@@ -1,0 +1,566 @@
+[
+ {
+  "platform": "custom",
+  "model": "antigravity-claude-opus-4-6-thinking",
+  "routed": [
+   "custom/claude-opus-4-6-thinking"
+  ],
+  "pings": [
+   {
+    "ok": true,
+    "ms": 3098
+   },
+   {
+    "ok": true,
+    "ms": 2279
+   },
+   {
+    "ok": true,
+    "ms": 2312
+   }
+  ],
+  "quiz": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "errors": [],
+  "tools": false,
+  "ttft_ms": 2304
+ },
+ {
+  "platform": "custom",
+  "model": "antigravity-gemini-3-flash",
+  "routed": [
+   "custom/gemini-3-flash"
+  ],
+  "pings": [
+   {
+    "ok": true,
+    "ms": 1791
+   },
+   {
+    "ok": true,
+    "ms": 811
+   },
+   {
+    "ok": true,
+    "ms": 1510
+   }
+  ],
+  "quiz": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "errors": [],
+  "tools": false,
+  "ttft_ms": 1396
+ },
+ {
+  "platform": "llmtr",
+  "model": "qwen/qwen3.8-27b-free",
+  "routed": [],
+  "pings": [
+   {
+    "ok": false,
+    "ms": 4
+   },
+   {
+    "ok": false,
+    "ms": 5
+   },
+   {
+    "ok": false,
+    "ms": 4
+   }
+  ],
+  "quiz": [],
+  "errors": [
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset.",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset.",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset."
+  ],
+  "skipped_rest": true
+ },
+ {
+  "platform": "xkiro",
+  "model": "qwen/qwen3.8-max:free",
+  "routed": [],
+  "pings": [
+   {
+    "ok": false,
+    "ms": 8
+   },
+   {
+    "ok": false,
+    "ms": 4
+   },
+   {
+    "ok": false,
+    "ms": 4
+   }
+  ],
+  "quiz": [],
+  "errors": [
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset.",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset.",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset."
+  ],
+  "skipped_rest": true
+ },
+ {
+  "platform": "xkiro",
+  "model": "qwen/qwen3.8-omni-flash:free",
+  "routed": [],
+  "pings": [
+   {
+    "ok": false,
+    "ms": 4
+   },
+   {
+    "ok": false,
+    "ms": 4
+   },
+   {
+    "ok": false,
+    "ms": 4
+   }
+  ],
+  "quiz": [],
+  "errors": [
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset.",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset.",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset."
+  ],
+  "skipped_rest": true
+ },
+ {
+  "platform": "router9",
+  "model": "deepseek/deepseek-v4-flash",
+  "routed": [],
+  "pings": [
+   {
+    "ok": false,
+    "ms": 5
+   },
+   {
+    "ok": false,
+    "ms": 5
+   },
+   {
+    "ok": false,
+    "ms": 7
+   }
+  ],
+  "quiz": [],
+  "errors": [
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset.",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset.",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset."
+  ],
+  "skipped_rest": true
+ },
+ {
+  "platform": "openrouter",
+  "model": "dots-studio/dots-3-note-preview:free",
+  "routed": [
+   "openrouter/dots-studio/dots-3-note-preview:free"
+  ],
+  "pings": [
+   {
+    "ok": true,
+    "ms": 2217
+   },
+   {
+    "ok": true,
+    "ms": 3238
+   },
+   {
+    "ok": true,
+    "ms": 1765
+   }
+  ],
+  "quiz": [
+   true,
+   true,
+   false,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "errors": [],
+  "tools": true,
+  "ttft_ms": 2171
+ },
+ {
+  "platform": "radeon",
+  "model": "DeepSeek-V4-Flash",
+  "routed": [
+   "radeon/DeepSeek-V4-Flash"
+  ],
+  "pings": [
+   {
+    "ok": true,
+    "ms": 2286
+   },
+   {
+    "ok": true,
+    "ms": 953
+   },
+   {
+    "ok": true,
+    "ms": 827
+   }
+  ],
+  "quiz": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "errors": [],
+  "tools": true,
+  "ttft_ms": 4446
+ },
+ {
+  "platform": "nvidia",
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "routed": [
+   "nvidia/nvidia/nemotron-3-ultra-550b-a55b"
+  ],
+  "pings": [
+   {
+    "ok": true,
+    "ms": 1536
+   },
+   {
+    "ok": true,
+    "ms": 1444
+   },
+   {
+    "ok": true,
+    "ms": 1084
+   }
+  ],
+  "quiz": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "errors": [],
+  "tools": true,
+  "ttft_ms": 1196
+ },
+ {
+  "platform": "llmtr",
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "routed": [],
+  "pings": [
+   {
+    "ok": false,
+    "ms": 491
+   },
+   {
+    "ok": false,
+    "ms": 5
+   },
+   {
+    "ok": false,
+    "ms": 3
+   }
+  ],
+  "quiz": [],
+  "errors": [
+   "All models rate-limited after 1 attempt. Soonest cooldown reset ~11h. Attempt trail: llmtr/nvidia/nemotron-3-ultra-550b-a55b key1: rate_limi",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~11",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~11"
+  ],
+  "skipped_rest": true
+ },
+ {
+  "platform": "router9",
+  "model": "z-ai/glm-5.2",
+  "routed": [],
+  "pings": [
+   {
+    "ok": false,
+    "ms": 4
+   },
+   {
+    "ok": false,
+    "ms": 4
+   },
+   {
+    "ok": false,
+    "ms": 8
+   }
+  ],
+  "quiz": [],
+  "errors": [
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset.",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset.",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset."
+  ],
+  "skipped_rest": true
+ },
+ {
+  "platform": "router9",
+  "model": "deepseek/deepseek-v4-pro",
+  "routed": [],
+  "pings": [
+   {
+    "ok": false,
+    "ms": 4
+   },
+   {
+    "ok": false,
+    "ms": 4
+   },
+   {
+    "ok": false,
+    "ms": 7
+   }
+  ],
+  "quiz": [],
+  "errors": [
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset.",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset.",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset."
+  ],
+  "skipped_rest": true
+ },
+ {
+  "platform": "router9",
+  "model": "minimax/minimax-m3",
+  "routed": [],
+  "pings": [
+   {
+    "ok": false,
+    "ms": 5
+   },
+   {
+    "ok": false,
+    "ms": 4
+   },
+   {
+    "ok": false,
+    "ms": 9
+   }
+  ],
+  "quiz": [],
+  "errors": [
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset.",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset.",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset."
+  ],
+  "skipped_rest": true
+ },
+ {
+  "platform": "xkiro",
+  "model": "qwen/qwen3.7-max:free",
+  "routed": [],
+  "pings": [
+   {
+    "ok": false,
+    "ms": 594
+   },
+   {
+    "ok": false,
+    "ms": 4
+   },
+   {
+    "ok": false,
+    "ms": 4
+   }
+  ],
+  "quiz": [],
+  "errors": [
+   "All models rate-limited after 3 attempts. Soonest cooldown reset ~10m. Attempt trail: xkiro/qwen/qwen3.7-max:free key1: rate_limited; xkiro/",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~10",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~10"
+  ],
+  "skipped_rest": true
+ },
+ {
+  "platform": "xkiro",
+  "model": "qwen/qwen3.6-max-preview:free",
+  "routed": [],
+  "pings": [
+   {
+    "ok": false,
+    "ms": 578
+   },
+   {
+    "ok": false,
+    "ms": 4
+   },
+   {
+    "ok": false,
+    "ms": 4
+   }
+  ],
+  "quiz": [],
+  "errors": [
+   "All models rate-limited after 3 attempts. Soonest cooldown reset ~10m. Attempt trail: xkiro/qwen/qwen3.6-max-preview:free key1: rate_limited",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~10",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~10"
+  ],
+  "skipped_rest": true
+ },
+ {
+  "platform": "xkiro",
+  "model": "qwen/qwen3.6-plus:free",
+  "routed": [],
+  "pings": [
+   {
+    "ok": false,
+    "ms": 3838
+   },
+   {
+    "ok": false,
+    "ms": 3675
+   },
+   {
+    "ok": false,
+    "ms": 186
+   }
+  ],
+  "quiz": [],
+  "errors": [
+   "All 1 routed attempt(s) failed with upstream provider errors (upstream_error ×1). This is a provider-side failure, not a problem with your r",
+   "All 1 routed attempt(s) failed with upstream provider errors (upstream_error ×1). This is a provider-side failure, not a problem with your r",
+   "All models rate-limited after 1 attempt. Soonest cooldown reset ~10m. Attempt trail: xkiro/qwen/qwen3.6-plus:free key1: rate_limited. Last e"
+  ],
+  "skipped_rest": true
+ },
+ {
+  "platform": "zhipu",
+  "model": "glm-4.7-flash",
+  "routed": [
+   "zhipu/glm-4.7-flash"
+  ],
+  "pings": [
+   {
+    "ok": true,
+    "ms": 3119
+   },
+   {
+    "ok": true,
+    "ms": 2917
+   },
+   {
+    "ok": false,
+    "ms": 419
+   }
+  ],
+  "quiz": [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  "errors": [
+   "All models rate-limited after 1 attempt. Soonest cooldown reset ~2m. Attempt trail: zhipu/glm-4.7-flash key1: rate_limited. Last error: Zhip",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~84",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~78",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~72",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~66",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~60",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~54",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~48",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~42"
+  ],
+  "tools": false,
+  "ttft_ms": null
+ },
+ {
+  "platform": "ovh",
+  "model": "Qwen3.8-27B",
+  "routed": [
+   "ovh/Qwen3.8-27B"
+  ],
+  "pings": [
+   {
+    "ok": true,
+    "ms": 47915
+   },
+   {
+    "ok": true,
+    "ms": 36660
+   },
+   {
+    "ok": true,
+    "ms": 35778
+   }
+  ],
+  "quiz": [
+   false,
+   false,
+   false,
+   true,
+   false,
+   true,
+   true,
+   true
+  ],
+  "errors": [
+   "All 1 routed attempt(s) failed with upstream provider errors (timeout ×1). This is a provider-side failure, not a problem with your request;",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~58",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~26"
+  ],
+  "tools": true,
+  "ttft_ms": 14351
+ },
+ {
+  "platform": "google",
+  "model": "gemini-3.7-flash",
+  "routed": [],
+  "pings": [
+   {
+    "ok": false,
+    "ms": 60008
+   },
+   {
+    "ok": false,
+    "ms": 10315
+   },
+   {
+    "ok": false,
+    "ms": 565
+   }
+  ],
+  "quiz": [],
+  "errors": [
+   "All 1 routed attempt(s) failed with upstream provider errors (timeout ×1). This is a provider-side failure, not a problem with your request;",
+   "All 1 routed attempt(s) failed with upstream provider errors (upstream_error ×1). This is a provider-side failure, not a problem with your r",
+   "All 1 routed attempt(s) failed with upstream provider errors (upstream_error ×1). This is a provider-side failure, not a problem with your r"
+  ],
+  "skipped_rest": true
+ }
+]

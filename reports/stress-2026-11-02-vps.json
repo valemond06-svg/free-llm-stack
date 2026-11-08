@@ -1,0 +1,3861 @@
+{
+ "label": "vps",
+ "started": "2026-11-02 22:33:51",
+ "catalog": [
+  {
+   "id": "auto",
+   "name": "Auto (router picks the best available model)",
+   "available": true,
+   "unavailable_reason": null,
+   "execution_status": null,
+   "context_window": 262144
+  },
+  {
+   "id": "fusion",
+   "name": "Fusion (panel of models answer in parallel, a judge synthesizes one answer)",
+   "available": true,
+   "unavailable_reason": null,
+   "execution_status": null,
+   "context_window": 262144
+  },
+  {
+   "id": "claude-opus-4-5",
+   "name": "Opus slot (auto-routed to a free model)",
+   "available": true,
+   "unavailable_reason": null,
+   "execution_status": null,
+   "context_window": 262144
+  },
+  {
+   "id": "claude-sonnet-4-5",
+   "name": "Sonnet slot (auto-routed to a free model)",
+   "available": true,
+   "unavailable_reason": null,
+   "execution_status": null,
+   "context_window": 262144
+  },
+  {
+   "id": "claude-haiku-4-5",
+   "name": "Haiku slot (auto-routed to a free model)",
+   "available": true,
+   "unavailable_reason": null,
+   "execution_status": null,
+   "context_window": 262144
+  },
+  {
+   "id": "qwen3.8-max",
+   "name": "Qwen3.8 Max",
+   "available": true,
+   "unavailable_reason": null,
+   "execution_status": "ready",
+   "context_window": 1000000
+  },
+  {
+   "id": "gemini-3.8-flash",
+   "name": "Gemini 3.8 Flash",
+   "available": true,
+   "unavailable_reason": null,
+   "execution_status": "ready",
+   "context_window": 1048576
+  },
+  {
+   "id": "gemini-flash",
+   "name": "Gemini Flash",
+   "available": true,
+   "unavailable_reason": null,
+   "execution_status": "ready",
+   "context_window": null
+  },
+  {
+   "id": "qwen3.8-flash",
+   "name": "Qwen3.8 Flash",
+   "available": true,
+   "unavailable_reason": null,
+   "execution_status": "ready",
+   "context_window": 1000000
+  },
+  {
+   "id": "gemini-3.7-flash",
+   "name": "Gemini 3.7 Flash",
+   "available": true,
+   "unavailable_reason": null,
+   "execution_status": "ready",
+   "context_window": 1048576
+  },
+  {
+   "id": "qwen3.8-omni-flash",
+   "name": "Qwen3.8 Omni Flash",
+   "available": true,
+   "unavailable_reason": null,
+   "execution_status": "ready",
+   "context_window": 1000000
+  },
+  {
+   "id": "gpt-5.6-luna",
+   "name": "GPT-5.6 Luna",
+   "available": true,
+   "unavailable_reason": null,
+   "execution_status": "ready",
+   "context_window": 1000000
+  },
+  {
+   "id": "dots3-note-preview",
+   "name": "Dots3 Note Preview",
+   "available": true,
+   "unavailable_reason": null,
+   "execution_status": "ready",
+   "context_window": 512000
+  },
+  {
+   "id": "deepseek-v4-flash",
+   "name": "DeepSeek V4 Flash",
+   "available": true,
+   "unavailable_reason": null,
+   "execution_status": "ready",
+   "context_window": 1048576
+  },
+  {
+   "id": "gemini-3.6-flash",
+   "name": "Gemini 3.6 Flash",
+   "available": true,
+   "unavailable_reason": null,
+   "execution_status": "ready",
+   "context_window": 1048576
+  },
+  {
+   "id": "qwen-3.8-27b",
+   "name": "Qwen 3.8 27B",
+   "available": true,
+   "unavailable_reason": null,
+   "execution_status": "ready",
+   "context_window": 262144
+  },
+  {
+   "id": "qwen3.8-27b",
+   "name": "Qwen3.8 27B",
+   "available": true,
+   "unavailable_reason": null,
+   "execution_status": "ready",
+   "context_window": 262144
+  },
+  {
+   "id": "gemini-3.5-flash",
+   "name": "Gemini 3.5 Flash",
+   "available": true,
+   "unavailable_reason": null,
+   "execution_status": "ready",
+   "context_window": 1048576
+  },
+  {
+   "id": "minimax-m3",
+   "name": "MiniMax M3",
+   "available": true,
+   "unavailable_reason": null,
+   "execution_status": "ready",
+   "context_window": 1000000
+  },
+  {
+   "id": "qwen3.7-max",
+   "name": "Qwen3.7 Max",
+   "available": true,
+   "unavailable_reason": null,
+   "execution_status": "ready",
+   "context_window": 1000000
+  },
+  {
+   "id": "qwen3.6-max-preview",
+   "name": "Qwen3.6 Max Preview",
+   "available": true,
+   "unavailable_reason": null,
+   "execution_status": "ready",
+   "context_window": 262144
+  },
+  {
+   "id": "qwen3.6-plus",
+   "name": "Qwen3.6 Plus",
+   "available": true,
+   "unavailable_reason": null,
+   "execution_status": "ready",
+   "context_window": 1000000
+  },
+  {
+   "id": "laguna-s-2.1",
+   "name": "Laguna S 2.1",
+   "available": true,
+   "unavailable_reason": null,
+   "execution_status": "ready",
+   "context_window": 262144
+  },
+  {
+   "id": "nemotron-3-ultra-550b",
+   "name": "Nemotron 3 Ultra 550B",
+   "available": true,
+   "unavailable_reason": null,
+   "execution_status": "ready",
+   "context_window": 1000000
+  },
+  {
+   "id": "muse-glimmer-30b",
+   "name": "Muse Glimmer 30B",
+   "available": true,
+   "unavailable_reason": null,
+   "execution_status": "ready",
+   "context_window": 131072
+  },
+  {
+   "id": "glm-4.7-flash",
+   "name": "GLM-4.7 Flash",
+   "available": true,
+   "unavailable_reason": null,
+   "execution_status": "ready",
+   "context_window": 131072
+  },
+  {
+   "id": "poolside-laguna-xs-2.1",
+   "name": "Poolside Laguna XS 2.1",
+   "available": true,
+   "unavailable_reason": null,
+   "execution_status": "ready",
+   "context_window": 131072
+  },
+  {
+   "id": "mistral-medium-3.5",
+   "name": "Mistral Medium 3.5",
+   "available": true,
+   "unavailable_reason": null,
+   "execution_status": "ready",
+   "context_window": 262144
+  },
+  {
+   "id": "command-a-2",
+   "name": "Command A+",
+   "available": true,
+   "unavailable_reason": null,
+   "execution_status": "ready",
+   "context_window": 131072
+  },
+  {
+   "id": "nemotron-3-super-120b",
+   "name": "Nemotron 3 Super 120B",
+   "available": true,
+   "unavailable_reason": null,
+   "execution_status": "ready",
+   "context_window": 262144
+  },
+  {
+   "id": "nemotron-3.5-lightning",
+   "name": "Nemotron 3.5 Lightning",
+   "available": true,
+   "unavailable_reason": null,
+   "execution_status": "ready",
+   "context_window": 1048576
+  },
+  {
+   "id": "gpt-oss-120b",
+   "name": "GPT-OSS 120B",
+   "available": true,
+   "unavailable_reason": null,
+   "execution_status": "ready",
+   "context_window": 131072
+  },
+  {
+   "id": "north-mini-code",
+   "name": "North Mini Code",
+   "available": true,
+   "unavailable_reason": null,
+   "execution_status": "ready",
+   "context_window": 256000
+  },
+  {
+   "id": "claude-opus-4.6-thinking",
+   "name": "Claude Opus 4.6 Thinking",
+   "available": true,
+   "unavailable_reason": null,
+   "execution_status": "ready",
+   "context_window": 200000
+  },
+  {
+   "id": "claude-sonnet-4.6",
+   "name": "Claude Sonnet 4.6",
+   "available": true,
+   "unavailable_reason": null,
+   "execution_status": "ready",
+   "context_window": 1000000
+  },
+  {
+   "id": "gemini-3-flash",
+   "name": "Gemini 3 Flash",
+   "available": true,
+   "unavailable_reason": null,
+   "execution_status": "ready",
+   "context_window": null
+  },
+  {
+   "id": "qwq-32b",
+   "name": "QwQ 32B",
+   "available": true,
+   "unavailable_reason": null,
+   "execution_status": "ready",
+   "context_window": 131072
+  },
+  {
+   "id": "command-a-reasoning",
+   "name": "Command A Reasoning",
+   "available": true,
+   "unavailable_reason": null,
+   "execution_status": "ready",
+   "context_window": 256000
+  },
+  {
+   "id": "mistral-code",
+   "name": "Mistral Code",
+   "available": true,
+   "unavailable_reason": null,
+   "execution_status": "ready",
+   "context_window": 256000
+  },
+  {
+   "id": "glm-5.3",
+   "name": "GLM 5.3",
+   "available": false,
+   "unavailable_reason": "no_key",
+   "execution_status": "needsKey",
+   "context_window": 1000000
+  },
+  {
+   "id": "glm-5.3-flash",
+   "name": "GLM 5.3 Flash",
+   "available": false,
+   "unavailable_reason": "no_key",
+   "execution_status": "needsKey",
+   "context_window": 1000000
+  },
+  {
+   "id": "glm-5",
+   "name": "GLM 5",
+   "available": false,
+   "unavailable_reason": "no_key",
+   "execution_status": "needsKey",
+   "context_window": null
+  },
+  {
+   "id": "poolside-laguna-s-2.1",
+   "name": "Poolside Laguna S 2.1",
+   "available": false,
+   "unavailable_reason": "no_key",
+   "execution_status": "needsKey",
+   "context_window": 262144
+  },
+  {
+   "id": "nemotron-3-nano-omni-reasoning",
+   "name": "Nemotron 3 Nano Omni Reasoning",
+   "available": false,
+   "unavailable_reason": "no_key",
+   "execution_status": "needsKey",
+   "context_window": 256000
+  },
+  {
+   "id": "llama-3.2-11b-vision",
+   "name": "Llama 3.2 11B Vision",
+   "available": false,
+   "unavailable_reason": "no_key",
+   "execution_status": "needsKey",
+   "context_window": 131072
+  },
+  {
+   "id": "qwen3.8-flash-next",
+   "name": "Qwen3.8 Flash Next",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262144
+  },
+  {
+   "id": "agnes-3.0-flash",
+   "name": "Agnes 3.0 Flash",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": null
+  },
+  {
+   "id": "agnes-2.5-pro",
+   "name": "Agnes 2.5 Pro",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": null
+  },
+  {
+   "id": "deepseek-v4-flash-0731",
+   "name": "DeepSeek V4 Flash 0731",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 1048576
+  },
+  {
+   "id": "glm-5.2",
+   "name": "GLM-5.2",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 200000
+  },
+  {
+   "id": "deepseek-v4-pro",
+   "name": "DeepSeek V4 Pro",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131072
+  },
+  {
+   "id": "nex-n2.5-pro",
+   "name": "nex-n2.5-pro",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262000
+  },
+  {
+   "id": "moondream-3-preview",
+   "name": "Moondream 3 Preview",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": null
+  },
+  {
+   "id": "moondream-3.1-9b-a2b",
+   "name": "Moondream 3.1 9B A2B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 32768
+  },
+  {
+   "id": "agnes-2.5-pro-alpha",
+   "name": "Agnes 2.5 Pro Alpha",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": null
+  },
+  {
+   "id": "glm-5-turbo",
+   "name": "GLM-5 Turbo",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": null
+  },
+  {
+   "id": "gemini-robotics-er-2-preview",
+   "name": "Gemini Robotics-ER 2 Preview",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131072
+  },
+  {
+   "id": "glm-5v-turbo",
+   "name": "GLM-5V Turbo",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": null
+  },
+  {
+   "id": "ling-3.0-flash-vl",
+   "name": "ling-3.0-flash-vl",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262000
+  },
+  {
+   "id": "qwen3.7-plus",
+   "name": "Qwen3.7 Plus",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 1000000
+  },
+  {
+   "id": "deepseek-v4-flash-thinking",
+   "name": "DeepSeek V4 Flash Thinking",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": null
+  },
+  {
+   "id": "gpt-5.4-mini",
+   "name": "GPT 5.4 Mini",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 400000
+  },
+  {
+   "id": "ling-3.0-flash",
+   "name": "Ling 3.0 Flash",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262000
+  },
+  {
+   "id": "minimax-m2.5",
+   "name": "MiniMax M2.5",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 128000
+  },
+  {
+   "id": "minimax-m2.7",
+   "name": "MiniMax M2.7",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 200000
+  },
+  {
+   "id": "nemotron-3-ultra",
+   "name": "Nemotron 3 Ultra",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 1000000
+  },
+  {
+   "id": "agnes-2.5-flash",
+   "name": "Agnes 2.5 Flash",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262144
+  },
+  {
+   "id": "gemini-3.5-flash-lite",
+   "name": "Gemini 3.5 Flash Lite",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 1000000
+  },
+  {
+   "id": "gemini-flash-lite",
+   "name": "Gemini Flash Lite",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": null
+  },
+  {
+   "id": "nex-n2.5-mini",
+   "name": "nex-n2.5-mini",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262144
+  },
+  {
+   "id": "gpt-5.4-nano",
+   "name": "GPT 5.4 Nano",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 400000
+  },
+  {
+   "id": "ling-3.0-flash-sante",
+   "name": "ling-3.0-flash-sante",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262000
+  },
+  {
+   "id": "qwen3.6-27b",
+   "name": "Qwen3.6 27B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131072
+  },
+  {
+   "id": "sensenova-6.8-flash-lite",
+   "name": "SenseNova 6.8 Flash-Lite",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262144
+  },
+  {
+   "id": "aion-3.0",
+   "name": "Aion 3.0",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131072
+  },
+  {
+   "id": "qwen3.5-omni-plus",
+   "name": "Qwen3.5 Omni Plus",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262144
+  },
+  {
+   "id": "step-3.7-flash",
+   "name": "Step 3.7 Flash",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 256000
+  },
+  {
+   "id": "gemma-4-31b",
+   "name": "Gemma 4 31B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262144
+  },
+  {
+   "id": "gemma-4-31b-it",
+   "name": "Gemma 4 31B IT",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 32768
+  },
+  {
+   "id": "qwen-sea-lion-v4.5-27b",
+   "name": "Qwen SEA-LION v4.5 27B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 32768
+  },
+  {
+   "id": "qwen3.5-plus",
+   "name": "Qwen3.5 Plus",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 1000000
+  },
+  {
+   "id": "qwen3.7-flash",
+   "name": "Qwen3.7 Flash",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 1000000
+  },
+  {
+   "id": "gemini-3-flash-preview",
+   "name": "Gemini 3 Flash Preview",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 1048576
+  },
+  {
+   "id": "qwen3.5-397b",
+   "name": "Qwen3.5 397B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262144
+  },
+  {
+   "id": "qwen3.5-397b-a17b",
+   "name": "Qwen3.5 397B A17B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262144
+  },
+  {
+   "id": "qwen3.6-35b-a3b",
+   "name": "Qwen3.6 35B A3B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262144
+  },
+  {
+   "id": "claude-haiku-4.5",
+   "name": "Claude Haiku 4.5",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": null
+  },
+  {
+   "id": "gemma-4-26b",
+   "name": "Gemma 4 26B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": null
+  },
+  {
+   "id": "gemma-4-26b-it",
+   "name": "Gemma 4 26B IT",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 32768
+  },
+  {
+   "id": "gemma-4-26b-a4b",
+   "name": "Gemma 4 26B-A4B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262000
+  },
+  {
+   "id": "gemma-4-26b-a4b-it",
+   "name": "Gemma 4 26B-A4B it",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262144
+  },
+  {
+   "id": "gemma-4-31b-heretic",
+   "name": "Gemma 4 31B Heretic",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 4096
+  },
+  {
+   "id": "gpt-5-mini",
+   "name": "GPT 5 Mini",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 400000
+  },
+  {
+   "id": "step-3.5-flash",
+   "name": "Step 3.5 Flash",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 256000
+  },
+  {
+   "id": "aion-3.0-mini",
+   "name": "Aion 3.0 Mini",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131072
+  },
+  {
+   "id": "gemini-3.1-flash-lite-preview",
+   "name": "Gemini 3.1 Flash Lite Preview",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": null
+  },
+  {
+   "id": "gemini-3.1-flash-lite",
+   "name": "Gemini 3.1 Flash-Lite",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 1048576
+  },
+  {
+   "id": "qwen3-max",
+   "name": "Qwen3 Max",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262144
+  },
+  {
+   "id": "glm-4.7-flashx",
+   "name": "GLM-4.7 FlashX",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": null
+  },
+  {
+   "id": "laguna-xs-2.1",
+   "name": "Laguna XS 2.1",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262000
+  },
+  {
+   "id": "qwen3.5-flash",
+   "name": "Qwen3.5 Flash",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 1000000
+  },
+  {
+   "id": "agnes-2.0-flash",
+   "name": "Agnes 2.0 Flash",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262144
+  },
+  {
+   "id": "kilo-auto",
+   "name": "Kilo Auto",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 256000
+  },
+  {
+   "id": "qwen-3.5-9b",
+   "name": "Qwen 3.5 9B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": null
+  },
+  {
+   "id": "qwen3.5-9b",
+   "name": "Qwen3.5 9B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262144
+  },
+  {
+   "id": "free-router",
+   "name": "Free Router",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 200000
+  },
+  {
+   "id": "gemini-2.5-flash",
+   "name": "Gemini 2.5 Flash",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 1048576
+  },
+  {
+   "id": "gpt-4.1",
+   "name": "GPT 4.1",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 1000000
+  },
+  {
+   "id": "gpt-5-nano",
+   "name": "GPT 5 Nano",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 400000
+  },
+  {
+   "id": "nemotron-3-120b",
+   "name": "Nemotron 3 120B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262144
+  },
+  {
+   "id": "nemotron-3-super",
+   "name": "Nemotron 3 Super",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262000
+  },
+  {
+   "id": "nemotron-3.5-lightning-30b",
+   "name": "Nemotron 3.5 Lightning 30B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 1048576
+  },
+  {
+   "id": "nemotron-3.5-lightning-30b-a3b",
+   "name": "Nemotron 3.5 Lightning 30B A3B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 1000000
+  },
+  {
+   "id": "nemotron-3-super-120b-a12b",
+   "name": "nemotron-3-super-120b-a12b",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262144
+  },
+  {
+   "id": "qwen3-235b-a22b-thinking-2507",
+   "name": "Qwen3 235B A22B Thinking 2507",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262144
+  },
+  {
+   "id": "aion-2.0",
+   "name": "Aion 2.0",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131072
+  },
+  {
+   "id": "auto-route",
+   "name": "Auto route",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131072
+  },
+  {
+   "id": "bazaarlink-auto",
+   "name": "BazaarLink Auto",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131072
+  },
+  {
+   "id": "logfare-auto",
+   "name": "Logfare Auto",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131072
+  },
+  {
+   "id": "qwen3-235b-a22b-instruct-2507",
+   "name": "Qwen3 235B A22B Instruct 2507",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262144
+  },
+  {
+   "id": "qwen3-coder",
+   "name": "Qwen3 Coder",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 128000
+  },
+  {
+   "id": "qwen3.5-omni-flash",
+   "name": "Qwen3.5 Omni Flash",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262144
+  },
+  {
+   "id": "glm-4.5-airx",
+   "name": "GLM-4.5 AirX",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": null
+  },
+  {
+   "id": "longcat-flash-chat",
+   "name": "LongCat Flash Chat",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 128000
+  },
+  {
+   "id": "mistral-small-4",
+   "name": "Mistral Small 4",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262144
+  },
+  {
+   "id": "qwen3-coder-plus",
+   "name": "Qwen3 Coder Plus",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 1048576
+  },
+  {
+   "id": "qwen3-next-80b-a3b-thinking",
+   "name": "Qwen3 Next 80B A3B Thinking",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262144
+  },
+  {
+   "id": "default",
+   "name": "Default",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": null
+  },
+  {
+   "id": "gpt-4.1-mini",
+   "name": "GPT 4.1 Mini",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 1000000
+  },
+  {
+   "id": "qwen-plus-2025-07-28",
+   "name": "Qwen Plus 2025-07-28",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131072
+  },
+  {
+   "id": "qwen3-vl-235b-a22b-instruct",
+   "name": "Qwen3 VL 235B A22B Instruct",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131072
+  },
+  {
+   "id": "qwen3-vl-plus",
+   "name": "Qwen3 VL Plus",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262144
+  },
+  {
+   "id": "diffusiongemma-26b-a4b-it",
+   "name": "DiffusionGemma 26B A4B IT",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262144
+  },
+  {
+   "id": "qwen3-coder-30b-a3b-instruct",
+   "name": "Qwen3 Coder 30B A3B Instruct",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262000
+  },
+  {
+   "id": "qwen3-next-80b-a3b-instruct",
+   "name": "Qwen3 Next 80B A3B Instruct",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 128000
+  },
+  {
+   "id": "devstral-2",
+   "name": "Devstral 2",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262144
+  },
+  {
+   "id": "gemini-2.5-flash-lite",
+   "name": "Gemini 2.5 Flash-Lite",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 1000000
+  },
+  {
+   "id": "gpt-oss-20b",
+   "name": "GPT-OSS 20B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131072
+  },
+  {
+   "id": "mistral-large-3",
+   "name": "Mistral Large 3",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262144
+  },
+  {
+   "id": "mistral-code-latest",
+   "name": "mistral-code-latest",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 256000
+  },
+  {
+   "id": "nemotron-3-nano-30b-reasoning",
+   "name": "Nemotron 3 Nano 30B Reasoning",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262144
+  },
+  {
+   "id": "nemotron-3-nano-omni",
+   "name": "Nemotron 3 Nano Omni",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 256000
+  },
+  {
+   "id": "nemotron-3-nano-omni-30b-a3b-reasoning",
+   "name": "Nemotron 3 Nano Omni 30B A3B Reasoning",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262144
+  },
+  {
+   "id": "deepseek-r1-distill-qwen-32b",
+   "name": "DeepSeek R1 Distill Qwen 32B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131072
+  },
+  {
+   "id": "lfm-2.5-2.6b",
+   "name": "lfm-2.5-2.6b",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 32768
+  },
+  {
+   "id": "lfm2.5-2.6b",
+   "name": "LFM2.5 2.6B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 32768
+  },
+  {
+   "id": "r1-distill-qwen-32b",
+   "name": "R1 Distill Qwen 32B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131000
+  },
+  {
+   "id": "ch.at",
+   "name": "ch.at",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": null
+  },
+  {
+   "id": "glm-4.5-flash",
+   "name": "GLM-4.5 Flash",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131072
+  },
+  {
+   "id": "gpt-4o",
+   "name": "GPT 4o",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 128000
+  },
+  {
+   "id": "gpt-oss-safeguard-20b",
+   "name": "GPT-OSS Safeguard 20B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131072
+  },
+  {
+   "id": "ising-calibration-1.5-31b",
+   "name": "Ising Calibration 1.5 31B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131072
+  },
+  {
+   "id": "llama-3.3-70b",
+   "name": "Llama 3.3 70B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131072
+  },
+  {
+   "id": "llama-3.3-70b-fp8-fast",
+   "name": "Llama 3.3 70B fp8-fast",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 24000
+  },
+  {
+   "id": "llama-4-scout",
+   "name": "Llama 4 Scout",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131072
+  },
+  {
+   "id": "mistral-small-3.2-24b",
+   "name": "Mistral Small 3.2 24B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 128000
+  },
+  {
+   "id": "qwen3-omni-flash",
+   "name": "Qwen3 Omni Flash",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262144
+  },
+  {
+   "id": "rnj-1",
+   "name": "rnj-1",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": null
+  },
+  {
+   "id": "unmoderated-gpt",
+   "name": "unmoderated-gpt",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": null
+  },
+  {
+   "id": "qwen-sea-lion-v4-32b",
+   "name": "Qwen SEA-LION v4 32B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 32768
+  },
+  {
+   "id": "qwen2.5-72b-instruct",
+   "name": "Qwen2.5 72B Instruct",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 32000
+  },
+  {
+   "id": "qwen2.5-vl-72b",
+   "name": "Qwen2.5 VL 72B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 32768
+  },
+  {
+   "id": "qwen3-30b-a3b-instruct-2507",
+   "name": "Qwen3 30B A3B Instruct 2507",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131000
+  },
+  {
+   "id": "qwen3-30b-a3b-fp8",
+   "name": "Qwen3 30B-A3B fp8",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131072
+  },
+  {
+   "id": "command-a-vision",
+   "name": "Command A Vision",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 128000
+  },
+  {
+   "id": "command-a",
+   "name": "Command-A",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131072
+  },
+  {
+   "id": "gemma-4-e4b-ultra-uncensored",
+   "name": "Gemma 4 E4B Ultra Uncensored",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 4096
+  },
+  {
+   "id": "gemma-4-e4b-uncensored-aggressive",
+   "name": "Gemma 4 E4B Uncensored Aggressive",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 4096
+  },
+  {
+   "id": "gemma-4-e4b-uncensored-hauhaucs-aggressive-q4-k-m",
+   "name": "Gemma-4-E4B-Uncensored-HauhauCS-Aggressive-Q4 K M",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": null
+  },
+  {
+   "id": "gpt-4o-mini",
+   "name": "GPT 4o Mini",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 128000
+  },
+  {
+   "id": "groq-compound-mini",
+   "name": "Groq Compound Mini",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131072
+  },
+  {
+   "id": "hermes-3-llama-3.1-405b",
+   "name": "Hermes 3 Llama 3.1 405B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 128000
+  },
+  {
+   "id": "llama-3.1-8b",
+   "name": "Llama 3.1 8B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131072
+  },
+  {
+   "id": "mistral-small-3.1-24b",
+   "name": "Mistral Small 3.1 24B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131072
+  },
+  {
+   "id": "qwen2.5-32b-instruct",
+   "name": "Qwen2.5 32B Instruct",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131000
+  },
+  {
+   "id": "qwen2.5-coder-32b",
+   "name": "Qwen2.5 Coder 32B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 32768
+  },
+  {
+   "id": "qwen2.5-coder-32b-instruct",
+   "name": "Qwen2.5 Coder 32B Instruct",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 33000
+  },
+  {
+   "id": "llama-3.2-3b",
+   "name": "Llama 3.2 3B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 128000
+  },
+  {
+   "id": "llama-3.2-90b-vision",
+   "name": "Llama 3.2 90B Vision",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131072
+  },
+  {
+   "id": "llama-sea-lion-v3-70b",
+   "name": "Llama SEA-LION v3 70B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131072
+  },
+  {
+   "id": "llama-3-2-3b-instruct",
+   "name": "Llama-3 2-3B-Instruct",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131072
+  },
+  {
+   "id": "llama-3-2-3b-instruct-q4-k-m",
+   "name": "Llama-3 2-3B-Instruct-Q4 K M",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": null
+  },
+  {
+   "id": "llama-instant",
+   "name": "llama-instant",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": null
+  },
+  {
+   "id": "ministral-14b",
+   "name": "Ministral 14B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262144
+  },
+  {
+   "id": "ministral-3-14b",
+   "name": "Ministral 3 14B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262144
+  },
+  {
+   "id": "ministral-14b-2512",
+   "name": "ministral-14b-2512",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262144
+  },
+  {
+   "id": "ministral-14b-latest",
+   "name": "ministral-14b-latest",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262144
+  },
+  {
+   "id": "qwen2.5-7b-instruct",
+   "name": "Qwen2.5 7B Instruct",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131000
+  },
+  {
+   "id": "qwen2.5-coder-7b-instruct",
+   "name": "Qwen2.5 Coder 7B Instruct",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 32000
+  },
+  {
+   "id": "qwen3-4b-nymphaea-rp-i1-q4-k-s",
+   "name": "Qwen3-4B-Nymphaea-RP i1-Q4 K S",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": null
+  },
+  {
+   "id": "qwen3.5-0.8b",
+   "name": "Qwen3.5 0.8B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 4096
+  },
+  {
+   "id": "qwen3guard-gen-8b",
+   "name": "Qwen3Guard Gen 8B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 32768
+  },
+  {
+   "id": "aion-rp-llama-3.1-8b",
+   "name": "Aion-RP Llama 3.1 8B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 32768
+  },
+  {
+   "id": "command-a-translate",
+   "name": "Command A Translate",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 256000
+  },
+  {
+   "id": "gemma-3-1b",
+   "name": "Gemma 3 1B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 32000
+  },
+  {
+   "id": "gemma-3-4b-it",
+   "name": "gemma 3 4b it",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 32000
+  },
+  {
+   "id": "gemma-sea-lion-v4-27b",
+   "name": "Gemma SEA-LION v4 27B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131072
+  },
+  {
+   "id": "glm-4.6v-flash",
+   "name": "GLM-4.6V Flash",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131072
+  },
+  {
+   "id": "hunyuan-a13b-instruct",
+   "name": "Hunyuan A13B Instruct",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 128000
+  },
+  {
+   "id": "leanstral-1.5",
+   "name": "Leanstral 1.5",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262144
+  },
+  {
+   "id": "llama-3.2-11b-vision-instruct",
+   "name": "Llama 3.2 11B Vision Instruct",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131072
+  },
+  {
+   "id": "llama-3.2-1b",
+   "name": "Llama 3.2 1B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 128000
+  },
+  {
+   "id": "llama-3.2-1b-instruct",
+   "name": "Llama 3.2 1B Instruct",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131072
+  },
+  {
+   "id": "llama-3.2-1b-unsloth",
+   "name": "Llama 3.2 1B Unsloth",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 4096
+  },
+  {
+   "id": "llama-3-2-1b-instruct",
+   "name": "Llama-3 2-1B-Instruct",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131072
+  },
+  {
+   "id": "ministral-3-3b",
+   "name": "Ministral 3 3B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131072
+  },
+  {
+   "id": "ministral-3-8b",
+   "name": "Ministral 3 8B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262144
+  },
+  {
+   "id": "ministral-3b",
+   "name": "Ministral 3B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262144
+  },
+  {
+   "id": "ministral-8b",
+   "name": "Ministral 8B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262000
+  },
+  {
+   "id": "ministral-3b-2512",
+   "name": "ministral-3b-2512",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262144
+  },
+  {
+   "id": "ministral-3b-latest",
+   "name": "ministral-3b-latest",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262144
+  },
+  {
+   "id": "ministral-8b-2512",
+   "name": "ministral-8b-2512",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262144
+  },
+  {
+   "id": "ministral-8b-latest",
+   "name": "ministral-8b-latest",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262144
+  },
+  {
+   "id": "north-small-translate",
+   "name": "North Small Translate",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 32768
+  },
+  {
+   "id": "phi-4",
+   "name": "phi 4",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 16000
+  },
+  {
+   "id": "qwen3-0.6b-iq4",
+   "name": "Qwen3 0.6B IQ4",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 4096
+  },
+  {
+   "id": "qwen3guard-gen-0.6b",
+   "name": "Qwen3Guard Gen 0.6B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 32768
+  },
+  {
+   "id": "tiny-aya-global",
+   "name": "Tiny Aya Global",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 8192
+  },
+  {
+   "id": "codestral",
+   "name": "Codestral",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 32000
+  },
+  {
+   "id": "codestral-2508",
+   "name": "Codestral 2508",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 256000
+  },
+  {
+   "id": "codestral-latest",
+   "name": "codestral-latest",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 32000
+  },
+  {
+   "id": "gemma-3-12b-it",
+   "name": "gemma 3 12b it",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 32000
+  },
+  {
+   "id": "hermes-4-14b",
+   "name": "Hermes 4 14B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 40000
+  },
+  {
+   "id": "impish-llama-4b",
+   "name": "Impish LLAMA 4B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": null
+  },
+  {
+   "id": "llama-3-stheno-8b-v3.2",
+   "name": "Llama 3 Stheno 8B v3.2",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 4096
+  },
+  {
+   "id": "llama-3-super-nova-rp-8b",
+   "name": "Llama 3 Super Nova RP 8B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 4096
+  },
+  {
+   "id": "mistral-code-fim",
+   "name": "Mistral Code FIM",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 256000
+  },
+  {
+   "id": "mistral-nemo",
+   "name": "Mistral Nemo",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 128000
+  },
+  {
+   "id": "mistral-nemo-instruct-2407",
+   "name": "Mistral Nemo Instruct 2407",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 128000
+  },
+  {
+   "id": "mistral-code-fim-latest",
+   "name": "mistral-code-fim-latest",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 256000
+  },
+  {
+   "id": "mistral-tiny-2407",
+   "name": "mistral-tiny-2407",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": null
+  },
+  {
+   "id": "mistral-tiny-latest",
+   "name": "mistral-tiny-latest",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": null
+  },
+  {
+   "id": "open-mistral-nemo-2407",
+   "name": "Open Mistral Nemo 2407",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131000
+  },
+  {
+   "id": "open-mistral-nemo",
+   "name": "open-mistral-nemo",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": null
+  },
+  {
+   "id": "tiny-aya-earth",
+   "name": "Tiny Aya Earth",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 8192
+  },
+  {
+   "id": "tiny-aya-fire",
+   "name": "Tiny Aya Fire",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 8192
+  },
+  {
+   "id": "tiny-aya-water",
+   "name": "Tiny Aya Water",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 8192
+  },
+  {
+   "id": "devstral-small-2",
+   "name": "Devstral Small 2",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 262000
+  },
+  {
+   "id": "gemma-4-26b-a4b-it-chimerax",
+   "name": "Gemma 4 26B A4B IT chimerax",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 62000
+  },
+  {
+   "id": "gemma-4-26b-a4b-it-darksoul",
+   "name": "Gemma 4 26B A4B IT darksoul",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 62000
+  },
+  {
+   "id": "gemma-4-26b-a4b-it-luminous",
+   "name": "Gemma 4 26B A4B IT luminous",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 62000
+  },
+  {
+   "id": "gemma-4-26b-a4b-it-meromero",
+   "name": "Gemma 4 26B A4B IT meromero",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 62000
+  },
+  {
+   "id": "gemma-4-26b-a4b-it-moonlight",
+   "name": "Gemma 4 26B A4B IT moonlight",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 62000
+  },
+  {
+   "id": "gemma-4-26b-a4b-it-musica",
+   "name": "Gemma 4 26B A4B IT musica",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 62000
+  },
+  {
+   "id": "mythomax-l2-13b",
+   "name": "MythoMax L2 13B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 4000
+  },
+  {
+   "id": "ctx65536-magidonia-24b-heretic",
+   "name": "[ctx:65536] Magidonia-24B-heretic-",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": null
+  },
+  {
+   "id": "allam-2-7b",
+   "name": "ALLaM 2 7B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 4096
+  },
+  {
+   "id": "behemoth-x-123b-v2-1",
+   "name": "Behemoth-X-123B-v2 1",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": null
+  },
+  {
+   "id": "command-r-2",
+   "name": "Command R+",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131072
+  },
+  {
+   "id": "gemma-2-9b",
+   "name": "Gemma 2 9B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 8000
+  },
+  {
+   "id": "granite-4.0-h-micro",
+   "name": "Granite 4.0 H Micro",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131072
+  },
+  {
+   "id": "llama-2-7b-chat-lora",
+   "name": "Llama 2 7B Chat LoRA",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 8192
+  },
+  {
+   "id": "mistral-7b-instruct-v0.2-lora",
+   "name": "Mistral 7B Instruct v0.2 LoRA",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 32768
+  },
+  {
+   "id": "riva-translate-4b-instruct-v2",
+   "name": "Riva Translate 4B Instruct v2",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 32768
+  },
+  {
+   "id": "thedrummer-behemoth-128b-v3-q4-k-m",
+   "name": "TheDrummer Behemoth-128B-v3-Q4 K M",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": null
+  },
+  {
+   "id": "voxtral-small",
+   "name": "Voxtral Small",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 32768
+  },
+  {
+   "id": "voxtral-small-2507",
+   "name": "Voxtral Small 2507",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 32768
+  },
+  {
+   "id": "voxtral-small-latest",
+   "name": "voxtral-small-latest",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 32768
+  },
+  {
+   "id": "aya-expanse-32b",
+   "name": "Aya Expanse 32B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131072
+  },
+  {
+   "id": "aya-vision-32b",
+   "name": "Aya Vision 32B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 16384
+  },
+  {
+   "id": "command-r",
+   "name": "Command R",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 128000
+  },
+  {
+   "id": "command-r7b",
+   "name": "Command R7B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131072
+  },
+  {
+   "id": "command-r7b-arabic",
+   "name": "Command R7B Arabic",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 128000
+  },
+  {
+   "id": "cydonia-24b-v4.3",
+   "name": "Cydonia 24B v4.3",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 8192
+  },
+  {
+   "id": "llama-3.1-nemoguard-8b-content-safety",
+   "name": "Llama 3.1 NemoGuard 8B Content Safety",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131072
+  },
+  {
+   "id": "llama-3.1-nemoguard-8b-topic-control",
+   "name": "Llama 3.1 NemoGuard 8B Topic Control",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131072
+  },
+  {
+   "id": "llama-3.1-nemotron-safety-guard-8b-v3",
+   "name": "Llama 3.1 Nemotron Safety Guard 8B v3",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131072
+  },
+  {
+   "id": "llama-guard-3-8b",
+   "name": "Llama Guard 3 8B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 131072
+  },
+  {
+   "id": "nemotron-3.5-content-safety",
+   "name": "Nemotron 3.5 Content Safety",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 128000
+  },
+  {
+   "id": "nemotron-parse-2.0",
+   "name": "Nemotron Parse 2.0",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": null
+  },
+  {
+   "id": "skyfall-31b-v4.2",
+   "name": "Skyfall 31B v4.2",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 4096
+  },
+  {
+   "id": "angelic-eclipse-12b",
+   "name": "Angelic Eclipse 12B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 4096
+  },
+  {
+   "id": "forgotten-safeword-22b",
+   "name": "Forgotten-Safeword-22B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": null
+  },
+  {
+   "id": "gemma-2b-it-lora",
+   "name": "Gemma 2B IT LoRA",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 8192
+  },
+  {
+   "id": "gemma-7b-it-lora",
+   "name": "Gemma 7B IT LoRA",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 8192
+  },
+  {
+   "id": "impish-bloodmoon-12b",
+   "name": "Impish Bloodmoon 12B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": null
+  },
+  {
+   "id": "l3-8b-lunaris-v1",
+   "name": "L3 8B Lunaris v1",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 8000
+  },
+  {
+   "id": "l3-8b-stheno-v3-2-q5-k-m",
+   "name": "L3-8B-Stheno-v3 2-Q5 K M",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": null
+  },
+  {
+   "id": "llama-prompt-guard-2-22m",
+   "name": "Llama Prompt Guard 2 22M",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 512
+  },
+  {
+   "id": "llama-prompt-guard-2-86m",
+   "name": "Llama Prompt Guard 2 86M",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 512
+  },
+  {
+   "id": "llava-1.5-7b",
+   "name": "LLaVA 1.5 7B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 4096
+  },
+  {
+   "id": "mini-magnum-12b-v1.1",
+   "name": "Mini Magnum 12B v1.1",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 4096
+  },
+  {
+   "id": "mn-violet-lotus-12b-q8-0",
+   "name": "MN-Violet-Lotus-12B Q8 0",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": null
+  },
+  {
+   "id": "rocinante-x-12b",
+   "name": "Rocinante-X-12B",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": null
+  },
+  {
+   "id": "thea-rp-3b-25r",
+   "name": "thea-rp-3b-25r",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": null
+  },
+  {
+   "id": "sea-guard",
+   "name": "SEA-Guard",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 8192
+  },
+  {
+   "id": "cerebras-gpt-111m-instruct",
+   "name": "Cerebras GPT 111M Instruct",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 4096
+  },
+  {
+   "id": "pythia-70m-deduped",
+   "name": "Pythia 70M Deduped",
+   "available": false,
+   "unavailable_reason": "disabled",
+   "execution_status": "needsKey",
+   "context_window": 4096
+  }
+ ],
+ "models": [
+  {
+   "model": "auto",
+   "pong": [
+    {
+     "model": "auto",
+     "ok": true,
+     "latency_ms": 375,
+     "routed": "groq/qwen/qwen3.8-27b",
+     "error": null,
+     "http": 200,
+     "content": "465F62",
+     "tool_calls": 0,
+     "finish": "stop",
+     "out_tokens": 7,
+     "correct": true
+    }
+   ],
+   "stream": {
+    "ok": true,
+    "ttft_ms": 468,
+    "total_ms": 671,
+    "chunks": 20,
+    "error": null
+   },
+   "tools": {
+    "ok": true,
+    "error": null,
+    "routed": "groq/qwen/qwen3.8-27b"
+   },
+   "long": {
+    "ok": true,
+    "latency_ms": 922,
+    "chars": 1379,
+    "out_tokens": 268,
+    "finish": "stop",
+    "error": null
+   }
+  },
+  {
+   "model": "claude-haiku-4-5",
+   "pong": [
+    {
+     "model": "claude-haiku-4-5",
+     "ok": true,
+     "latency_ms": 500,
+     "routed": "groq/qwen/qwen3.8-27b",
+     "error": null,
+     "http": 200,
+     "content": "B0CAFE",
+     "tool_calls": 0,
+     "finish": "stop",
+     "out_tokens": 5,
+     "correct": true
+    }
+   ],
+   "stream": {
+    "ok": true,
+    "ttft_ms": 327,
+    "total_ms": 436,
+    "chunks": 20,
+    "error": null
+   },
+   "tools": {
+    "ok": true,
+    "error": null,
+    "routed": "groq/qwen/qwen3.8-27b"
+   },
+   "long": {
+    "ok": true,
+    "latency_ms": 735,
+    "chars": 1230,
+    "out_tokens": 217,
+    "finish": "stop",
+    "error": null
+   }
+  },
+  {
+   "model": "claude-opus-4-5",
+   "pong": [
+    {
+     "model": "claude-opus-4-5",
+     "ok": true,
+     "latency_ms": 360,
+     "routed": "groq/qwen/qwen3.8-27b",
+     "error": null,
+     "http": 200,
+     "content": "4571A1",
+     "tool_calls": 0,
+     "finish": "stop",
+     "out_tokens": 7,
+     "correct": true
+    }
+   ],
+   "stream": {
+    "ok": true,
+    "ttft_ms": 594,
+    "total_ms": 719,
+    "chunks": 20,
+    "error": null
+   },
+   "tools": {
+    "ok": true,
+    "error": null,
+    "routed": "groq/qwen/qwen3.8-27b"
+   },
+   "long": {
+    "ok": true,
+    "latency_ms": 875,
+    "chars": 1301,
+    "out_tokens": 235,
+    "finish": "stop",
+    "error": null
+   }
+  },
+  {
+   "model": "claude-opus-4.6-thinking",
+   "pong": [
+    {
+     "model": "claude-opus-4.6-thinking",
+     "ok": false,
+     "latency_ms": 452,
+     "routed": null,
+     "error": "All 1 routed attempt(s) failed with upstream provider errors (error ×1). This is a provider-side failure, not a problem with your request; retry, or check provi",
+     "http": 502,
+     "content": "",
+     "tool_calls": 0,
+     "finish": null,
+     "out_tokens": null,
+     "correct": false
+    }
+   ],
+   "stream": {
+    "ok": false,
+    "ttft_ms": null,
+    "total_ms": null,
+    "chunks": 0,
+    "error": "HTTP 429"
+   },
+   "tools": {
+    "ok": false,
+    "error": "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~4s.",
+    "routed": null
+   },
+   "long": {
+    "ok": false,
+    "latency_ms": 343,
+    "chars": 0,
+    "out_tokens": null,
+    "finish": null,
+    "error": "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~3s."
+   }
+  },
+  {
+   "model": "claude-sonnet-4-5",
+   "pong": [
+    {
+     "model": "claude-sonnet-4-5",
+     "ok": true,
+     "latency_ms": 703,
+     "routed": "groq/qwen/qwen3.8-27b",
+     "error": null,
+     "http": 200,
+     "content": "647B69",
+     "tool_calls": 0,
+     "finish": "stop",
+     "out_tokens": 7,
+     "correct": true
+    }
+   ],
+   "stream": {
+    "ok": true,
+    "ttft_ms": 390,
+    "total_ms": 515,
+    "chunks": 20,
+    "error": null
+   },
+   "tools": {
+    "ok": true,
+    "error": null,
+    "routed": "groq/qwen/qwen3.8-27b"
+   },
+   "long": {
+    "ok": true,
+    "latency_ms": 781,
+    "chars": 1299,
+    "out_tokens": 234,
+    "finish": "stop",
+    "error": null
+   }
+  },
+  {
+   "model": "claude-sonnet-4.6",
+   "pong": [
+    {
+     "model": "claude-sonnet-4.6",
+     "ok": false,
+     "latency_ms": 750,
+     "routed": null,
+     "error": "All 1 routed attempt(s) failed with upstream provider errors (error ×1). This is a provider-side failure, not a problem with your request; retry, or check provi",
+     "http": 502,
+     "content": "",
+     "tool_calls": 0,
+     "finish": null,
+     "out_tokens": null,
+     "correct": false
+    }
+   ],
+   "stream": {
+    "ok": false,
+    "ttft_ms": null,
+    "total_ms": null,
+    "chunks": 0,
+    "error": "HTTP 429"
+   },
+   "tools": {
+    "ok": false,
+    "error": "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~3s.",
+    "routed": null
+   },
+   "long": {
+    "ok": false,
+    "latency_ms": 531,
+    "chars": 0,
+    "out_tokens": null,
+    "finish": null,
+    "error": "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~2s."
+   }
+  },
+  {
+   "model": "command-a-2",
+   "pong": [
+    {
+     "model": "command-a-2",
+     "ok": true,
+     "latency_ms": 1563,
+     "routed": "cohere/command-a-plus-05-2026",
+     "error": null,
+     "http": 200,
+     "content": "0720C6",
+     "tool_calls": 0,
+     "finish": "stop",
+     "out_tokens": 125,
+     "correct": true
+    }
+   ],
+   "stream": {
+    "ok": true,
+    "ttft_ms": 1625,
+    "total_ms": 1843,
+    "chunks": 10,
+    "error": null
+   },
+   "tools": {
+    "ok": true,
+    "error": null,
+    "routed": "cohere/command-a-plus-05-2026"
+   },
+   "long": {
+    "ok": true,
+    "latency_ms": 4235,
+    "chars": 3766,
+    "out_tokens": 800,
+    "finish": "length",
+    "error": null
+   }
+  },
+  {
+   "model": "command-a-reasoning",
+   "pong": [
+    {
+     "model": "command-a-reasoning",
+     "ok": true,
+     "latency_ms": 2860,
+     "routed": "cohere/command-a-reasoning-08-2025",
+     "error": null,
+     "http": 200,
+     "content": "```text F17D4F ```",
+     "tool_calls": 0,
+     "finish": "stop",
+     "out_tokens": 257,
+     "correct": true
+    }
+   ],
+   "stream": {
+    "ok": false,
+    "ttft_ms": null,
+    "total_ms": 19280,
+    "chunks": 0,
+    "error": "stream vuoto"
+   },
+   "tools": {
+    "ok": true,
+    "error": null,
+    "routed": "cohere/command-a-reasoning-08-2025"
+   },
+   "long": {
+    "ok": true,
+    "latency_ms": 4703,
+    "chars": 1092,
+    "out_tokens": 432,
+    "finish": "stop",
+    "error": null
+   }
+  },
+  {
+   "model": "deepseek-v4-flash",
+   "pong": [
+    {
+     "model": "deepseek-v4-flash",
+     "ok": true,
+     "latency_ms": 1844,
+     "routed": "electronhub/deepseek-v4-flash",
+     "error": null,
+     "http": 200,
+     "content": " F38540",
+     "tool_calls": 0,
+     "finish": "stop",
+     "out_tokens": 21,
+     "correct": true
+    }
+   ],
+   "stream": {
+    "ok": false,
+    "ttft_ms": null,
+    "total_ms": null,
+    "chunks": 0,
+    "error": "HTTP 429"
+   },
+   "tools": {
+    "ok": false,
+    "error": "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~51s.",
+    "routed": null
+   },
+   "long": {
+    "ok": false,
+    "latency_ms": 264,
+    "chars": 0,
+    "out_tokens": null,
+    "finish": null,
+    "error": "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~50s."
+   }
+  },
+  {
+   "model": "dots3-note-preview",
+   "pong": [
+    {
+     "model": "dots3-note-preview",
+     "ok": true,
+     "latency_ms": 2469,
+     "routed": "kilo/dots-studio/dots-3-note-preview:free",
+     "error": null,
+     "http": 200,
+     "content": " 11D6C6",
+     "tool_calls": 0,
+     "finish": "stop",
+     "out_tokens": 48,
+     "correct": true
+    }
+   ],
+   "stream": {
+    "ok": true,
+    "ttft_ms": 1640,
+    "total_ms": 1952,
+    "chunks": 5,
+    "error": null
+   },
+   "tools": {
+    "ok": true,
+    "error": null,
+    "routed": "kilo/dots-studio/dots-3-note-preview:free"
+   },
+   "long": {
+    "ok": true,
+    "latency_ms": 6202,
+    "chars": 1061,
+    "out_tokens": 327,
+    "finish": "stop",
+    "error": null
+   }
+  },
+  {
+   "model": "fusion",
+   "pong": [
+    {
+     "model": "fusion",
+     "ok": true,
+     "latency_ms": 4859,
+     "routed": "None/None",
+     "error": null,
+     "http": 200,
+     "content": "EC3FB2",
+     "tool_calls": 0,
+     "finish": "stop",
+     "out_tokens": 146,
+     "correct": true
+    }
+   ],
+   "stream": {
+    "ok": true,
+    "ttft_ms": 7327,
+    "total_ms": 7547,
+    "chunks": 20,
+    "error": null
+   },
+   "tools": {
+    "ok": true,
+    "error": null,
+    "routed": "None/None"
+   },
+   "long": {
+    "ok": true,
+    "latency_ms": 8656,
+    "chars": 1826,
+    "out_tokens": 1118,
+    "finish": "stop",
+    "error": null
+   }
+  },
+  {
+   "model": "gemini-3-flash",
+   "pong": [
+    {
+     "model": "gemini-3-flash",
+     "ok": false,
+     "latency_ms": 608,
+     "routed": null,
+     "error": "All 1 routed attempt(s) failed with upstream provider errors (error ×1). This is a provider-side failure, not a problem with your request; retry, or check provi",
+     "http": 502,
+     "content": "",
+     "tool_calls": 0,
+     "finish": null,
+     "out_tokens": null,
+     "correct": false
+    }
+   ],
+   "stream": {
+    "ok": false,
+    "ttft_ms": null,
+    "total_ms": null,
+    "chunks": 0,
+    "error": "HTTP 429"
+   },
+   "tools": {
+    "ok": false,
+    "error": "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~4s.",
+    "routed": null
+   },
+   "long": {
+    "ok": false,
+    "latency_ms": 610,
+    "chars": 0,
+    "out_tokens": null,
+    "finish": null,
+    "error": "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~3s."
+   }
+  },
+  {
+   "model": "gemini-3.5-flash",
+   "pong": [
+    {
+     "model": "gemini-3.5-flash",
+     "ok": true,
+     "latency_ms": 2905,
+     "routed": "google/gemini-3.5-flash",
+     "error": null,
+     "http": 200,
+     "content": "DA8F1E",
+     "tool_calls": 0,
+     "finish": "stop",
+     "out_tokens": 5,
+     "correct": true
+    }
+   ],
+   "stream": {
+    "ok": false,
+    "ttft_ms": null,
+    "total_ms": null,
+    "chunks": 0,
+    "error": "HTTP 429"
+   },
+   "tools": {
+    "ok": false,
+    "error": "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~22s.",
+    "routed": null
+   },
+   "long": {
+    "ok": false,
+    "latency_ms": 405,
+    "chars": 0,
+    "out_tokens": null,
+    "finish": null,
+    "error": "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~22s."
+   }
+  },
+  {
+   "model": "gemini-3.6-flash",
+   "pong": [
+    {
+     "model": "gemini-3.6-flash",
+     "ok": true,
+     "latency_ms": 4061,
+     "routed": "google/gemini-3.6-flash",
+     "error": null,
+     "http": 200,
+     "content": "79D878",
+     "tool_calls": 0,
+     "finish": "stop",
+     "out_tokens": 6,
+     "correct": true
+    }
+   ],
+   "stream": {
+    "ok": true,
+    "ttft_ms": 1750,
+    "total_ms": 1813,
+    "chunks": 2,
+    "error": null
+   },
+   "tools": {
+    "ok": true,
+    "error": null,
+    "routed": "google/gemini-3.6-flash"
+   },
+   "long": {
+    "ok": false,
+    "latency_ms": 8390,
+    "chars": 164,
+    "out_tokens": 29,
+    "finish": "length",
+    "error": null
+   }
+  },
+  {
+   "model": "gemini-3.7-flash",
+   "pong": [
+    {
+     "model": "gemini-3.7-flash",
+     "ok": false,
+     "latency_ms": 60311,
+     "routed": null,
+     "error": "All 1 routed attempt(s) failed with upstream provider errors (timeout ×1). This is a provider-side failure, not a problem with your request; retry, or check pro",
+     "http": 502,
+     "content": "",
+     "tool_calls": 0,
+     "finish": null,
+     "out_tokens": null,
+     "correct": false
+    }
+   ],
+   "stream": {
+    "ok": false,
+    "ttft_ms": null,
+    "total_ms": null,
+    "chunks": 0,
+    "error": "HTTP 502"
+   },
+   "tools": {
+    "ok": false,
+    "error": "All 1 routed attempt(s) failed with upstream provider errors (timeout ×1). This is a provider-side failure, not a problem with your request; retry, or check pro",
+    "routed": null
+   },
+   "long": {
+    "ok": false,
+    "latency_ms": 281,
+    "chars": 0,
+    "out_tokens": null,
+    "finish": null,
+    "error": "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~2m."
+   }
+  },
+  {
+   "model": "gemini-3.8-flash",
+   "pong": [
+    {
+     "model": "gemini-3.8-flash",
+     "ok": false,
+     "latency_ms": 60344,
+     "routed": null,
+     "error": "All 1 routed attempt(s) failed with upstream provider errors (timeout ×1). This is a provider-side failure, not a problem with your request; retry, or check pro",
+     "http": 502,
+     "content": "",
+     "tool_calls": 0,
+     "finish": null,
+     "out_tokens": null,
+     "correct": false
+    }
+   ],
+   "stream": {
+    "ok": false,
+    "ttft_ms": null,
+    "total_ms": null,
+    "chunks": 0,
+    "error": "HTTP 502"
+   },
+   "tools": {
+    "ok": false,
+    "error": "All 1 routed attempt(s) failed with upstream provider errors (upstream_error ×1). This is a provider-side failure, not a problem with your request; retry, or ch",
+    "routed": null
+   },
+   "long": {
+    "ok": false,
+    "latency_ms": 311,
+    "chars": 0,
+    "out_tokens": null,
+    "finish": null,
+    "error": "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~33s."
+   }
+  },
+  {
+   "model": "gemini-flash",
+   "pong": [
+    {
+     "model": "gemini-flash",
+     "ok": false,
+     "latency_ms": 60327,
+     "routed": null,
+     "error": "All 1 routed attempt(s) failed with upstream provider errors (timeout ×1). This is a provider-side failure, not a problem with your request; retry, or check pro",
+     "http": 502,
+     "content": "",
+     "tool_calls": 0,
+     "finish": null,
+     "out_tokens": null,
+     "correct": false
+    }
+   ],
+   "stream": {
+    "ok": false,
+    "ttft_ms": null,
+    "total_ms": null,
+    "chunks": 0,
+    "error": "HTTP 502"
+   },
+   "tools": {
+    "ok": false,
+    "error": "All 1 routed attempt(s) failed with upstream provider errors (upstream_error ×1). This is a provider-side failure, not a problem with your request; retry, or ch",
+    "routed": null
+   },
+   "long": {
+    "ok": false,
+    "latency_ms": 202,
+    "chars": 0,
+    "out_tokens": null,
+    "finish": null,
+    "error": "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~66s."
+   }
+  },
+  {
+   "model": "glm-4.7-flash",
+   "pong": [
+    {
+     "model": "glm-4.7-flash",
+     "ok": true,
+     "latency_ms": 12453,
+     "routed": "zhipu/glm-4.7-flash",
+     "error": null,
+     "http": 200,
+     "content": "4D944B",
+     "tool_calls": 0,
+     "finish": "stop",
+     "out_tokens": 194,
+     "correct": true
+    }
+   ],
+   "stream": {
+    "ok": true,
+    "ttft_ms": 3280,
+    "total_ms": 3327,
+    "chunks": 19,
+    "error": null
+   },
+   "tools": {
+    "ok": true,
+    "error": null,
+    "routed": "zhipu/glm-4.7-flash"
+   },
+   "long": {
+    "ok": true,
+    "latency_ms": 13984,
+    "chars": 3853,
+    "out_tokens": 800,
+    "finish": "length",
+    "error": null
+   }
+  },
+  {
+   "model": "gpt-5.6-luna",
+   "pong": [
+    {
+     "model": "gpt-5.6-luna",
+     "ok": true,
+     "latency_ms": 3609,
+     "routed": "electronhub/gpt-5.6-luna",
+     "error": null,
+     "http": 200,
+     "content": "445AE3",
+     "tool_calls": 0,
+     "finish": "stop",
+     "out_tokens": 3,
+     "correct": true
+    }
+   ],
+   "stream": {
+    "ok": true,
+    "ttft_ms": 6811,
+    "total_ms": 7827,
+    "chunks": 19,
+    "error": null
+   },
+   "tools": {
+    "ok": true,
+    "error": null,
+    "routed": "electronhub/gpt-5.6-luna"
+   },
+   "long": {
+    "ok": true,
+    "latency_ms": 51250,
+    "chars": 1077,
+    "out_tokens": 242,
+    "finish": "stop",
+    "error": null
+   }
+  },
+  {
+   "model": "gpt-oss-120b",
+   "pong": [
+    {
+     "model": "gpt-oss-120b",
+     "ok": true,
+     "latency_ms": 938,
+     "routed": "groq/openai/gpt-oss-120b",
+     "error": null,
+     "http": 200,
+     "content": "38DCF2",
+     "tool_calls": 0,
+     "finish": "stop",
+     "out_tokens": 62,
+     "correct": true
+    }
+   ],
+   "stream": {
+    "ok": true,
+    "ttft_ms": 1733,
+    "total_ms": 1733,
+    "chunks": 19,
+    "error": null
+   },
+   "tools": {
+    "ok": true,
+    "error": null,
+    "routed": "groq/openai/gpt-oss-120b"
+   },
+   "long": {
+    "ok": true,
+    "latency_ms": 2265,
+    "chars": 3437,
+    "out_tokens": 800,
+    "finish": "length",
+    "error": null
+   }
+  },
+  {
+   "model": "laguna-s-2.1",
+   "pong": [
+    {
+     "model": "laguna-s-2.1",
+     "ok": false,
+     "latency_ms": 406,
+     "routed": null,
+     "error": "All models rate-limited after 1 attempt. Soonest cooldown reset ~43s. Attempt trail: electronhub/laguna-s-2.1 key1: rate_limited. Last error: ElectronHub API er",
+     "http": 429,
+     "content": "",
+     "tool_calls": 0,
+     "finish": null,
+     "out_tokens": null,
+     "correct": false
+    }
+   ],
+   "stream": {
+    "ok": false,
+    "ttft_ms": null,
+    "total_ms": null,
+    "chunks": 0,
+    "error": "HTTP 429"
+   },
+   "tools": {
+    "ok": false,
+    "error": "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~42s.",
+    "routed": null
+   },
+   "long": {
+    "ok": false,
+    "latency_ms": 235,
+    "chars": 0,
+    "out_tokens": null,
+    "finish": null,
+    "error": "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~42s."
+   }
+  },
+  {
+   "model": "minimax-m3",
+   "pong": [
+    {
+     "model": "minimax-m3",
+     "ok": false,
+     "latency_ms": 531,
+     "routed": null,
+     "error": "All models rate-limited after 1 attempt. Soonest cooldown reset ~21s. Attempt trail: electronhub/minimax-m3 key1: rate_limited. Last error: ElectronHub API erro",
+     "http": 429,
+     "content": "",
+     "tool_calls": 0,
+     "finish": null,
+     "out_tokens": null,
+     "correct": false
+    }
+   ],
+   "stream": {
+    "ok": false,
+    "ttft_ms": null,
+    "total_ms": null,
+    "chunks": 0,
+    "error": "HTTP 429"
+   },
+   "tools": {
+    "ok": false,
+    "error": "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~20s.",
+    "routed": null
+   },
+   "long": {
+    "ok": false,
+    "latency_ms": 203,
+    "chars": 0,
+    "out_tokens": null,
+    "finish": null,
+    "error": "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~19s."
+   }
+  },
+  {
+   "model": "mistral-code",
+   "pong": [
+    {
+     "model": "mistral-code",
+     "ok": true,
+     "latency_ms": 671,
+     "routed": "mistral/mistral-code-latest",
+     "error": null,
+     "http": 200,
+     "content": "D906CC",
+     "tool_calls": 0,
+     "finish": "stop",
+     "out_tokens": 6,
+     "correct": true
+    }
+   ],
+   "stream": {
+    "ok": true,
+    "ttft_ms": 765,
+    "total_ms": 953,
+    "chunks": 35,
+    "error": null
+   },
+   "tools": {
+    "ok": false,
+    "error": "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~9s.",
+    "routed": null
+   },
+   "long": {
+    "ok": false,
+    "latency_ms": 343,
+    "chars": 0,
+    "out_tokens": null,
+    "finish": null,
+    "error": "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~8s."
+   }
+  },
+  {
+   "model": "mistral-medium-3.5",
+   "pong": [
+    {
+     "model": "mistral-medium-3.5",
+     "ok": true,
+     "latency_ms": 1203,
+     "routed": "xkiro/mistralai/mistral-medium-3.5",
+     "error": null,
+     "http": 200,
+     "content": "FFFE24",
+     "tool_calls": 0,
+     "finish": "stop",
+     "out_tokens": 5,
+     "correct": true
+    }
+   ],
+   "stream": {
+    "ok": true,
+    "ttft_ms": 875,
+    "total_ms": 905,
+    "chunks": 7,
+    "error": null
+   },
+   "tools": {
+    "ok": true,
+    "error": null,
+    "routed": "xkiro/mistralai/mistral-medium-3.5"
+   },
+   "long": {
+    "ok": true,
+    "latency_ms": 2389,
+    "chars": 1057,
+    "out_tokens": 202,
+    "finish": "stop",
+    "error": null
+   }
+  },
+  {
+   "model": "muse-glimmer-30b",
+   "pong": [
+    {
+     "model": "muse-glimmer-30b",
+     "ok": false,
+     "latency_ms": 90125,
+     "routed": null,
+     "error": "TimeoutError: timed out",
+     "http": null,
+     "content": "",
+     "tool_calls": 0,
+     "finish": null,
+     "out_tokens": null,
+     "correct": false
+    }
+   ],
+   "stream": {
+    "ok": false,
+    "ttft_ms": null,
+    "total_ms": null,
+    "chunks": 0,
+    "error": "TimeoutError: timed out"
+   },
+   "tools": {
+    "ok": false,
+    "error": "TimeoutError: timed out",
+    "routed": null
+   },
+   "long": {
+    "ok": false,
+    "latency_ms": 90109,
+    "chars": 0,
+    "out_tokens": null,
+    "finish": null,
+    "error": "TimeoutError: timed out"
+   }
+  },
+  {
+   "model": "nemotron-3-super-120b",
+   "pong": [
+    {
+     "model": "nemotron-3-super-120b",
+     "ok": false,
+     "latency_ms": 452,
+     "routed": null,
+     "error": "Every routed provider reports the model as not found or removed upstream (1 attempt(s)). The catalog entry looks stale; pick another model or call /v1/models fo",
+     "http": 404,
+     "content": "",
+     "tool_calls": 0,
+     "finish": null,
+     "out_tokens": null,
+     "correct": false
+    }
+   ],
+   "stream": {
+    "ok": false,
+    "ttft_ms": null,
+    "total_ms": null,
+    "chunks": 0,
+    "error": "HTTP 429"
+   },
+   "tools": {
+    "ok": false,
+    "error": "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~76s. 1 model skipped: ",
+    "routed": null
+   },
+   "long": {
+    "ok": false,
+    "latency_ms": 234,
+    "chars": 0,
+    "out_tokens": null,
+    "finish": null,
+    "error": "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~75s. 1 model skipped: "
+   }
+  },
+  {
+   "model": "nemotron-3-ultra-550b",
+   "pong": [
+    {
+     "model": "nemotron-3-ultra-550b",
+     "ok": true,
+     "latency_ms": 1734,
+     "routed": "nvidia/nvidia/nemotron-3-ultra-550b-a55b",
+     "error": null,
+     "http": 200,
+     "content": "45EC5A",
+     "tool_calls": 0,
+     "finish": "stop",
+     "out_tokens": 84,
+     "correct": true
+    }
+   ],
+   "stream": {
+    "ok": true,
+    "ttft_ms": 1078,
+    "total_ms": 3390,
+    "chunks": 4,
+    "error": null
+   },
+   "tools": {
+    "ok": true,
+    "error": null,
+    "routed": "nvidia/nvidia/nemotron-3-ultra-550b-a55b"
+   },
+   "long": {
+    "ok": true,
+    "latency_ms": 5811,
+    "chars": 1405,
+    "out_tokens": 355,
+    "finish": "stop",
+    "error": null
+   }
+  },
+  {
+   "model": "nemotron-3.5-lightning",
+   "pong": [
+    {
+     "model": "nemotron-3.5-lightning",
+     "ok": true,
+     "latency_ms": 1984,
+     "routed": "openrouter/nvidia/nemotron-3.5-lightning:free",
+     "error": null,
+     "http": 200,
+     "content": "FA851B",
+     "tool_calls": 0,
+     "finish": "stop",
+     "out_tokens": 190,
+     "correct": true
+    }
+   ],
+   "stream": {
+    "ok": true,
+    "ttft_ms": 2781,
+    "total_ms": 2781,
+    "chunks": 20,
+    "error": null
+   },
+   "tools": {
+    "ok": true,
+    "error": null,
+    "routed": "openrouter/nvidia/nemotron-3.5-lightning:free"
+   },
+   "long": {
+    "ok": true,
+    "latency_ms": 9577,
+    "chars": 2969,
+    "out_tokens": 800,
+    "finish": "length",
+    "error": null
+   }
+  },
+  {
+   "model": "north-mini-code",
+   "pong": [
+    {
+     "model": "north-mini-code",
+     "ok": true,
+     "latency_ms": 3031,
+     "routed": "cohere/north-mini-code-1-0",
+     "error": null,
+     "http": 200,
+     "content": "60685E",
+     "tool_calls": 0,
+     "finish": "stop",
+     "out_tokens": 69,
+     "correct": true
+    }
+   ],
+   "stream": {
+    "ok": true,
+    "ttft_ms": 1436,
+    "total_ms": 1625,
+    "chunks": 10,
+    "error": null
+   },
+   "tools": {
+    "ok": true,
+    "error": null,
+    "routed": "cohere/north-mini-code-1-0"
+   },
+   "long": {
+    "ok": true,
+    "latency_ms": 11827,
+    "chars": 3773,
+    "out_tokens": 800,
+    "finish": "length",
+    "error": null
+   }
+  },
+  {
+   "model": "poolside-laguna-xs-2.1",
+   "pong": [
+    {
+     "model": "poolside-laguna-xs-2.1",
+     "ok": true,
+     "latency_ms": 438,
+     "routed": "nvidia/poolside/laguna-xs-2.1",
+     "error": null,
+     "http": 200,
+     "content": "FB6B94",
+     "tool_calls": 0,
+     "finish": "stop",
+     "out_tokens": 6,
+     "correct": true
+    }
+   ],
+   "stream": {
+    "ok": true,
+    "ttft_ms": 421,
+    "total_ms": 639,
+    "chunks": 20,
+    "error": null
+   },
+   "tools": {
+    "ok": true,
+    "error": null,
+    "routed": "nvidia/poolside/laguna-xs-2.1"
+   },
+   "long": {
+    "ok": true,
+    "latency_ms": 1813,
+    "chars": 1117,
+    "out_tokens": 218,
+    "finish": "stop",
+    "error": null
+   }
+  },
+  {
+   "model": "qwen-3.8-27b",
+   "pong": [
+    {
+     "model": "qwen-3.8-27b",
+     "ok": true,
+     "latency_ms": 1656,
+     "routed": "cloudflare/@cf/qwen/qwen3.8-27b",
+     "error": null,
+     "http": 200,
+     "content": " 93E255",
+     "tool_calls": 0,
+     "finish": "stop",
+     "out_tokens": 50,
+     "correct": true
+    }
+   ],
+   "stream": {
+    "ok": true,
+    "ttft_ms": 1563,
+    "total_ms": 2078,
+    "chunks": 20,
+    "error": null
+   },
+   "tools": {
+    "ok": true,
+    "error": null,
+    "routed": "cloudflare/@cf/qwen/qwen3.8-27b"
+   },
+   "long": {
+    "ok": false,
+    "latency_ms": 26765,
+    "chars": 0,
+    "out_tokens": null,
+    "finish": null,
+    "error": "All 1 routed attempt(s) failed with upstream provider errors (empty_completion ×1). This is a provider-side failure, not a problem with your request; retry, or "
+   }
+  },
+  {
+   "model": "qwen3.6-max-preview",
+   "pong": [
+    {
+     "model": "qwen3.6-max-preview",
+     "ok": true,
+     "latency_ms": 4718,
+     "routed": "xkiro/qwen/qwen3.6-max-preview:free",
+     "error": null,
+     "http": 200,
+     "content": "2D834E",
+     "tool_calls": 0,
+     "finish": "stop",
+     "out_tokens": 6,
+     "correct": true
+    }
+   ],
+   "stream": {
+    "ok": true,
+    "ttft_ms": 2531,
+    "total_ms": 3015,
+    "chunks": 6,
+    "error": null
+   },
+   "tools": {
+    "ok": true,
+    "error": null,
+    "routed": "xkiro/qwen/qwen3.6-max-preview:free"
+   },
+   "long": {
+    "ok": true,
+    "latency_ms": 7000,
+    "chars": 1156,
+    "out_tokens": 196,
+    "finish": "stop",
+    "error": null
+   }
+  },
+  {
+   "model": "qwen3.6-plus",
+   "pong": [
+    {
+     "model": "qwen3.6-plus",
+     "ok": true,
+     "latency_ms": 3063,
+     "routed": "xkiro/qwen/qwen3.6-plus:free",
+     "error": null,
+     "http": 200,
+     "content": "4655A9",
+     "tool_calls": 0,
+     "finish": "stop",
+     "out_tokens": 6,
+     "correct": true
+    }
+   ],
+   "stream": {
+    "ok": true,
+    "ttft_ms": 7593,
+    "total_ms": 8577,
+    "chunks": 6,
+    "error": null
+   },
+   "tools": {
+    "ok": true,
+    "error": null,
+    "routed": "xkiro/qwen/qwen3.6-plus:free"
+   },
+   "long": {
+    "ok": true,
+    "latency_ms": 6968,
+    "chars": 1393,
+    "out_tokens": 227,
+    "finish": "stop",
+    "error": null
+   }
+  },
+  {
+   "model": "qwen3.7-max",
+   "pong": [
+    {
+     "model": "qwen3.7-max",
+     "ok": true,
+     "latency_ms": 3610,
+     "routed": "xkiro/qwen/qwen3.7-max:free",
+     "error": null,
+     "http": 200,
+     "content": "BBD17B",
+     "tool_calls": 0,
+     "finish": "stop",
+     "out_tokens": 5,
+     "correct": true
+    }
+   ],
+   "stream": {
+    "ok": true,
+    "ttft_ms": 2375,
+    "total_ms": 3375,
+    "chunks": 6,
+    "error": null
+   },
+   "tools": {
+    "ok": true,
+    "error": null,
+    "routed": "xkiro/qwen/qwen3.7-max:free"
+   },
+   "long": {
+    "ok": true,
+    "latency_ms": 7875,
+    "chars": 1161,
+    "out_tokens": 201,
+    "finish": "stop",
+    "error": null
+   }
+  },
+  {
+   "model": "qwen3.8-27b",
+   "pong": [
+    {
+     "model": "qwen3.8-27b",
+     "ok": true,
+     "latency_ms": 515,
+     "routed": "groq/qwen/qwen3.8-27b",
+     "error": null,
+     "http": 200,
+     "content": "42F737",
+     "tool_calls": 0,
+     "finish": "stop",
+     "out_tokens": 7,
+     "correct": true
+    }
+   ],
+   "stream": {
+    "ok": true,
+    "ttft_ms": 561,
+    "total_ms": 796,
+    "chunks": 20,
+    "error": null
+   },
+   "tools": {
+    "ok": true,
+    "error": null,
+    "routed": "groq/qwen/qwen3.8-27b"
+   },
+   "long": {
+    "ok": true,
+    "latency_ms": 765,
+    "chars": 1152,
+    "out_tokens": 206,
+    "finish": "stop",
+    "error": null
+   }
+  },
+  {
+   "model": "qwen3.8-flash",
+   "pong": [
+    {
+     "model": "qwen3.8-flash",
+     "ok": true,
+     "latency_ms": 3078,
+     "routed": "electronhub/qwen3.8-flash",
+     "error": null,
+     "http": 200,
+     "content": "4EFAB5",
+     "tool_calls": 0,
+     "finish": "stop",
+     "out_tokens": 40,
+     "correct": true
+    }
+   ],
+   "stream": {
+    "ok": true,
+    "ttft_ms": 3061,
+    "total_ms": 3561,
+    "chunks": 6,
+    "error": null
+   },
+   "tools": {
+    "ok": true,
+    "error": null,
+    "routed": "electronhub/qwen3.8-flash"
+   },
+   "long": {
+    "ok": true,
+    "latency_ms": 15656,
+    "chars": 3500,
+    "out_tokens": 800,
+    "finish": "length",
+    "error": null
+   }
+  },
+  {
+   "model": "qwen3.8-max",
+   "pong": [
+    {
+     "model": "qwen3.8-max",
+     "ok": true,
+     "latency_ms": 6077,
+     "routed": "xkiro/qwen/qwen3.8-max:free",
+     "error": null,
+     "http": 200,
+     "content": "B986E0",
+     "tool_calls": 0,
+     "finish": "stop",
+     "out_tokens": 6,
+     "correct": true
+    }
+   ],
+   "stream": {
+    "ok": true,
+    "ttft_ms": 4375,
+    "total_ms": 5515,
+    "chunks": 7,
+    "error": null
+   },
+   "tools": {
+    "ok": false,
+    "error": "All 1 routed attempt(s) failed with upstream provider errors (upstream_error ×1). This is a provider-side failure, not a problem with your request; retry, or ch",
+    "routed": null
+   },
+   "long": {
+    "ok": true,
+    "latency_ms": 10656,
+    "chars": 1069,
+    "out_tokens": 188,
+    "finish": "stop",
+    "error": null
+   }
+  },
+  {
+   "model": "qwen3.8-omni-flash",
+   "pong": [
+    {
+     "model": "qwen3.8-omni-flash",
+     "ok": true,
+     "latency_ms": 7188,
+     "routed": "xkiro/qwen/qwen3.8-omni-flash:free",
+     "error": null,
+     "http": 200,
+     "content": "8CD9E3",
+     "tool_calls": 0,
+     "finish": "stop",
+     "out_tokens": 6,
+     "correct": true
+    }
+   ],
+   "stream": {
+    "ok": true,
+    "ttft_ms": 2421,
+    "total_ms": 3389,
+    "chunks": 6,
+    "error": null
+   },
+   "tools": {
+    "ok": true,
+    "error": null,
+    "routed": "xkiro/qwen/qwen3.8-omni-flash:free"
+   },
+   "long": {
+    "ok": true,
+    "latency_ms": 6985,
+    "chars": 1195,
+    "out_tokens": 207,
+    "finish": "stop",
+    "error": null
+   }
+  },
+  {
+   "model": "qwq-32b",
+   "pong": [
+    {
+     "model": "qwq-32b",
+     "ok": true,
+     "latency_ms": 4718,
+     "routed": "cloudflare/@cf/qwen/qwq-32b",
+     "error": null,
+     "http": 200,
+     "content": "Okay, the user wants me to reply with exactly the code \"74EE6C\" and nothing else",
+     "tool_calls": 0,
+     "finish": "stop",
+     "out_tokens": 133,
+     "correct": true
+    }
+   ],
+   "stream": {
+    "ok": true,
+    "ttft_ms": 688,
+    "total_ms": 13235,
+    "chunks": 355,
+    "error": null
+   },
+   "tools": {
+    "ok": true,
+    "error": null,
+    "routed": "cloudflare/@cf/qwen/qwq-32b"
+   },
+   "long": {
+    "ok": true,
+    "latency_ms": 22311,
+    "chars": 3444,
+    "out_tokens": 694,
+    "finish": "stop",
+    "error": null
+   }
+  }
+ ],
+ "load": [
+  {
+   "concurrency": 5,
+   "total": 10,
+   "ok": 10,
+   "wall_s": 1.9,
+   "p50_ms": 492,
+   "p95_ms": 1438,
+   "max_ms": 1438,
+   "routed": {
+    "groq/qwen/qwen3.8-27b": 10
+   },
+   "errors": {}
+  },
+  {
+   "concurrency": 10,
+   "total": 20,
+   "ok": 20,
+   "wall_s": 0.9,
+   "p50_ms": 375,
+   "p95_ms": 546,
+   "max_ms": 546,
+   "routed": {
+    "groq/qwen/qwen3.8-27b": 20
+   },
+   "errors": {}
+  }
+ ],
+ "mcp": [
+  {
+   "tool": "healthcheck",
+   "ok": true,
+   "ms": 406,
+   "text": "{ \"status\": \"ready\", \"mcp_enabled\": true, \"default_model\": \"auto\", \"available_models\": 34, \"configured_providers\": 15, \"healthy_providers\": 12, \"search\": { \"sta"
+  },
+  {
+   "tool": "routing_info",
+   "ok": true,
+   "ms": 375,
+   "text": "{ \"strategy\": \"priority\", \"key_selection\": \"auto\", \"top_models\": [ { \"model\": \"qwen/qwen3.8-27b\", \"platform\": \"groq\", \"score\": 0.9 }, { \"model\": \"dots-studio/do"
+  },
+  {
+   "tool": "quota_outlook",
+   "ok": true,
+   "ms": 436,
+   "text": "{ \"generatedAt\": \"2026-11-02T21:44:12.235Z\", \"observationWindowMinutes\": 10, \"minimumRequests\": 3, \"pools\": [ { \"platform\": \"cerebras\", \"pool\": \"cerebras::share"
+  },
+  {
+   "tool": "provider_health",
+   "ok": true,
+   "ms": 313,
+   "text": "{ \"cerebras\": { \"keys\": { \"healthy\": 1 }, \"active_cooldowns\": 0, \"available_models\": 0 }, \"cloudflare\": { \"keys\": { \"healthy\": 1 }, \"active_cooldowns\": 0, \"avai"
+  },
+  {
+   "tool": "ask_freellmapi",
+   "ok": true,
+   "ms": 468,
+   "text": "{ \"answer\": \"MCP-OK\", \"requested_model\": \"auto\", \"model\": \"qwen/qwen3.8-27b\", \"finish_reason\": \"stop\", \"usage\": { \"queue_time\": 0.04729694, \"prompt_tokens\": 19,"
+  },
+  {
+   "tool": "web_search",
+   "ok": true,
+   "ms": 2859,
+   "text": "{ \"query\": \"Verona weather\", \"provider\": \"tavily\", \"engine\": \"tavily-search\", \"results\": [ { \"title\": \"Weather in Verona, Italy\", \"url\": \"https://www.weatherapi"
+  }
+ ],
+ "finished": "2026-11-02 22:44:16"
+}

@@ -6,6 +6,9 @@ Poi `python scripts/curator.py report`.
 | Sintomo | Causa probabile | Soluzione |
 |---|---|---|
 | `claude mcp list`: freellmapi ✗ / `ECONNREFUSED` | FreeLLMAPI spento | Avvia l'app (tray) o `docker compose up -d`. Controlla la porta: desktop 31415, Docker 3001. |
+| `ECONNREFUSED` nella sessione, ma il server risponde | Claude è partito prima di FreeLLMAPI (terminale ripristinato al boot) | `/mcp` per riconnettere. `claude-code/claude-guard.ps1`, caricato dal profilo PowerShell, evita il problema alle sessioni nuove. |
+| Modello fermo per ore ma funziona chiamando il proxy direttamente | Cooldown `tier` dopo un 403 transitorio | App chiusa e backup del DB, poi cancella la riga in `rate_limit_cooldowns`. Verifica con `scripts/stress_test.py --only MODELLO --phases models`. |
+| `No candidate model has a configured, usable provider key` con key sana | `model_scope_json` della key limita i modelli (log: `scoped to other models`) | App chiusa e backup del DB, poi `model_scope_json = NULL` su quella key. |
 | MCP risponde 403 | MCP disattivato | Dashboard → Keys → Agent compatibility → MCP on. |
 | 401 su `/v1` o `/mcp` | Key sbagliata | Copia di nuovo la unified key (tray → Copy Key o Keys header). |
 | La catena non segue l'ordine voluto | Profilo attivo con la sua catena | `curator.py apply` (scrive anche il profilo). Non modificare `fallback_config` a mano. |

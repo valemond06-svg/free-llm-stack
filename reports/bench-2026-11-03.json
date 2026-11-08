@@ -1,0 +1,1269 @@
+[
+ {
+  "platform": "custom",
+  "model": "antigravity-claude-opus-4-6-thinking",
+  "routed": [],
+  "pings": [
+   {
+    "ok": false,
+    "ms": 171
+   },
+   {
+    "ok": false,
+    "ms": 4
+   },
+   {
+    "ok": false,
+    "ms": 4
+   }
+  ],
+  "quiz": [],
+  "errors": [
+   "Model 'antigravity-claude-opus-4-6-thinking' is not in the catalog. Use 'auto' (or omit the 'model' field) to auto-route, or call /v1/models",
+   "Model 'antigravity-claude-opus-4-6-thinking' is not in the catalog. Use 'auto' (or omit the 'model' field) to auto-route, or call /v1/models",
+   "Model 'antigravity-claude-opus-4-6-thinking' is not in the catalog. Use 'auto' (or omit the 'model' field) to auto-route, or call /v1/models"
+  ],
+  "skipped_rest": true
+ },
+ {
+  "platform": "custom",
+  "model": "antigravity-gemini-3-flash",
+  "routed": [],
+  "pings": [
+   {
+    "ok": false,
+    "ms": 4
+   },
+   {
+    "ok": false,
+    "ms": 4
+   },
+   {
+    "ok": false,
+    "ms": 3
+   }
+  ],
+  "quiz": [],
+  "errors": [
+   "Model 'antigravity-gemini-3-flash' is not in the catalog. Use 'auto' (or omit the 'model' field) to auto-route, or call /v1/models for the a",
+   "Model 'antigravity-gemini-3-flash' is not in the catalog. Use 'auto' (or omit the 'model' field) to auto-route, or call /v1/models for the a",
+   "Model 'antigravity-gemini-3-flash' is not in the catalog. Use 'auto' (or omit the 'model' field) to auto-route, or call /v1/models for the a"
+  ],
+  "skipped_rest": true
+ },
+ {
+  "platform": "groq",
+  "model": "qwen/qwen3.8-27b",
+  "routed": [
+   "groq/qwen/qwen3.8-27b"
+  ],
+  "pings": [
+   {
+    "ok": true,
+    "ms": 366
+   },
+   {
+    "ok": true,
+    "ms": 1289
+   },
+   {
+    "ok": true,
+    "ms": 175
+   }
+  ],
+  "quiz": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "errors": [],
+  "tools": true,
+  "ttft_ms": 224
+ },
+ {
+  "platform": "groq",
+  "model": "openai/gpt-oss-120b",
+  "routed": [
+   "groq/openai/gpt-oss-120b"
+  ],
+  "pings": [
+   {
+    "ok": true,
+    "ms": 273
+   },
+   {
+    "ok": true,
+    "ms": 413
+   },
+   {
+    "ok": true,
+    "ms": 415
+   }
+  ],
+  "quiz": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "errors": [],
+  "tools": true,
+  "ttft_ms": 342
+ },
+ {
+  "platform": "xkiro",
+  "model": "qwen/qwen3.8-max:free",
+  "routed": [],
+  "pings": [
+   {
+    "ok": false,
+    "ms": 32102
+   },
+   {
+    "ok": false,
+    "ms": 28052
+   },
+   {
+    "ok": false,
+    "ms": 60010
+   }
+  ],
+  "quiz": [],
+  "errors": [
+   "All 1 routed attempt(s) failed with upstream provider errors (upstream_error ×1). This is a provider-side failure, not a problem with your r",
+   "All 1 routed attempt(s) failed with upstream provider errors (upstream_error ×1). This is a provider-side failure, not a problem with your r",
+   "All 1 routed attempt(s) failed with upstream provider errors (timeout ×1). This is a provider-side failure, not a problem with your request;"
+  ],
+  "skipped_rest": true
+ },
+ {
+  "platform": "xkiro",
+  "model": "qwen/qwen3.8-omni-flash:free",
+  "routed": [
+   "xkiro/qwen/qwen3.8-omni-flash:free"
+  ],
+  "pings": [
+   {
+    "ok": false,
+    "ms": 17251
+   },
+   {
+    "ok": true,
+    "ms": 10360
+   },
+   {
+    "ok": false,
+    "ms": 23618
+   }
+  ],
+  "quiz": [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  "errors": [
+   "All 1 routed attempt(s) failed with upstream provider errors (upstream_error ×1). This is a provider-side failure, not a problem with your r",
+   "All 1 routed attempt(s) failed with upstream provider errors (upstream_error ×1). This is a provider-side failure, not a problem with your r",
+   "All 1 routed attempt(s) failed with upstream provider errors (upstream_error ×1). This is a provider-side failure, not a problem with your r",
+   "All 1 routed attempt(s) failed with upstream provider errors (upstream_error ×1). This is a provider-side failure, not a problem with your r",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~30",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~28",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~26",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~24",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~22",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~20"
+  ],
+  "tools": false,
+  "ttft_ms": null
+ },
+ {
+  "platform": "xkiro",
+  "model": "qwen/qwen3.7-max:free",
+  "routed": [],
+  "pings": [
+   {
+    "ok": false,
+    "ms": 43667
+   },
+   {
+    "ok": false,
+    "ms": 33743
+   },
+   {
+    "ok": false,
+    "ms": 13554
+   }
+  ],
+  "quiz": [],
+  "errors": [
+   "All 1 routed attempt(s) failed with upstream provider errors (upstream_error ×1). This is a provider-side failure, not a problem with your r",
+   "All 1 routed attempt(s) failed with upstream provider errors (upstream_error ×1). This is a provider-side failure, not a problem with your r",
+   "All 1 routed attempt(s) failed with upstream provider errors (upstream_error ×1). This is a provider-side failure, not a problem with your r"
+  ],
+  "skipped_rest": true
+ },
+ {
+  "platform": "xkiro",
+  "model": "qwen/qwen3.6-max-preview:free",
+  "routed": [
+   "xkiro/qwen/qwen3.6-max-preview:free"
+  ],
+  "pings": [
+   {
+    "ok": false,
+    "ms": 23058
+   },
+   {
+    "ok": true,
+    "ms": 5874
+   },
+   {
+    "ok": false,
+    "ms": 54397
+   }
+  ],
+  "quiz": [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  "errors": [
+   "All 1 routed attempt(s) failed with upstream provider errors (upstream_error ×1). This is a provider-side failure, not a problem with your r",
+   "All 1 routed attempt(s) failed with upstream provider errors (upstream_error ×1). This is a provider-side failure, not a problem with your r",
+   "All 1 routed attempt(s) failed with upstream provider errors (upstream_error ×1). This is a provider-side failure, not a problem with your r",
+   "All 1 routed attempt(s) failed with upstream provider errors (upstream_error ×1). This is a provider-side failure, not a problem with your r",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~11",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~9s",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~7s",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~5s",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~3s",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~1s"
+  ],
+  "tools": false,
+  "ttft_ms": null
+ },
+ {
+  "platform": "xkiro",
+  "model": "qwen/qwen3.6-plus:free",
+  "routed": [],
+  "pings": [
+   {
+    "ok": false,
+    "ms": 19267
+   },
+   {
+    "ok": false,
+    "ms": 17055
+   },
+   {
+    "ok": false,
+    "ms": 45725
+   }
+  ],
+  "quiz": [],
+  "errors": [
+   "All 1 routed attempt(s) failed with upstream provider errors (upstream_error ×1). This is a provider-side failure, not a problem with your r",
+   "All 1 routed attempt(s) failed with upstream provider errors (upstream_error ×1). This is a provider-side failure, not a problem with your r",
+   "All 1 routed attempt(s) failed with upstream provider errors (upstream_error ×1). This is a provider-side failure, not a problem with your r"
+  ],
+  "skipped_rest": true
+ },
+ {
+  "platform": "xkiro",
+  "model": "mistralai/mistral-medium-3.5",
+  "routed": [
+   "xkiro/mistralai/mistral-medium-3.5"
+  ],
+  "pings": [
+   {
+    "ok": true,
+    "ms": 832
+   },
+   {
+    "ok": true,
+    "ms": 791
+   },
+   {
+    "ok": true,
+    "ms": 667
+   }
+  ],
+  "quiz": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "errors": [],
+  "tools": true,
+  "ttft_ms": 644
+ },
+ {
+  "platform": "radeon",
+  "model": "Qwen3.8-Flash-Next",
+  "routed": [
+   "radeon/Qwen3.8-Flash-Next"
+  ],
+  "pings": [
+   {
+    "ok": true,
+    "ms": 11746
+   },
+   {
+    "ok": true,
+    "ms": 15634
+   },
+   {
+    "ok": true,
+    "ms": 1961
+   }
+  ],
+  "quiz": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "errors": [],
+  "tools": true,
+  "ttft_ms": 26788
+ },
+ {
+  "platform": "radeon",
+  "model": "DeepSeek-V4-Flash",
+  "routed": [
+   "electronhub/deepseek-v4-flash",
+   "radeon/DeepSeek-V4-Flash"
+  ],
+  "pings": [
+   {
+    "ok": true,
+    "ms": 40335
+   },
+   {
+    "ok": true,
+    "ms": 1051
+   },
+   {
+    "ok": true,
+    "ms": 3947
+   }
+  ],
+  "quiz": [
+   true,
+   false,
+   true,
+   true,
+   true,
+   true,
+   true,
+   false
+  ],
+  "errors": [
+   "All 2 routed attempt(s) failed with upstream provider errors (upstream_error ×1, timeout ×1) (stopped early: retry time budget 45s exceeded ",
+   "All models rate-limited after 4 attempts. Soonest cooldown reset ~7s. Attempt trail: radeon/DeepSeek-V4-Flash key1: rate_limited; radeon/Dee"
+  ],
+  "tools": false,
+  "ttft_ms": null
+ },
+ {
+  "platform": "google",
+  "model": "gemini-3.6-flash",
+  "routed": [
+   "google/gemini-3.6-flash"
+  ],
+  "pings": [
+   {
+    "ok": true,
+    "ms": 2558
+   },
+   {
+    "ok": true,
+    "ms": 3683
+   },
+   {
+    "ok": true,
+    "ms": 3517
+   }
+  ],
+  "quiz": [
+   true,
+   false,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "errors": [
+   "All 1 routed attempt(s) failed with upstream provider errors (upstream_error ×1). This is a provider-side failure, not a problem with your r"
+  ],
+  "tools": true,
+  "ttft_ms": 1916
+ },
+ {
+  "platform": "google",
+  "model": "gemini-3.5-flash",
+  "routed": [
+   "google/gemini-3.5-flash"
+  ],
+  "pings": [
+   {
+    "ok": true,
+    "ms": 1809
+   },
+   {
+    "ok": true,
+    "ms": 1610
+   },
+   {
+    "ok": true,
+    "ms": 3099
+   }
+  ],
+  "quiz": [
+   true,
+   true,
+   true,
+   true,
+   false,
+   true,
+   true,
+   true
+  ],
+  "errors": [
+   "All 1 routed attempt(s) failed with upstream provider errors (upstream_error ×1). This is a provider-side failure, not a problem with your r"
+  ],
+  "tools": true,
+  "ttft_ms": 2470
+ },
+ {
+  "platform": "google",
+  "model": "gemini-3.7-flash",
+  "routed": [],
+  "pings": [
+   {
+    "ok": false,
+    "ms": 60006
+   },
+   {
+    "ok": false,
+    "ms": 17438
+   },
+   {
+    "ok": false,
+    "ms": 60007
+   }
+  ],
+  "quiz": [],
+  "errors": [
+   "All 1 routed attempt(s) failed with upstream provider errors (timeout ×1). This is a provider-side failure, not a problem with your request;",
+   "All 1 routed attempt(s) failed with upstream provider errors (upstream_error ×1). This is a provider-side failure, not a problem with your r",
+   "All 1 routed attempt(s) failed with upstream provider errors (timeout ×1). This is a provider-side failure, not a problem with your request;"
+  ],
+  "skipped_rest": true
+ },
+ {
+  "platform": "google",
+  "model": "gemini-3.8-flash",
+  "routed": [],
+  "pings": [
+   {
+    "ok": false,
+    "ms": 30310
+   },
+   {
+    "ok": false,
+    "ms": 60006
+   },
+   {
+    "ok": false,
+    "ms": 60006
+   }
+  ],
+  "quiz": [],
+  "errors": [
+   "All 1 routed attempt(s) failed with upstream provider errors (upstream_error ×1). This is a provider-side failure, not a problem with your r",
+   "All 1 routed attempt(s) failed with upstream provider errors (timeout ×1). This is a provider-side failure, not a problem with your request;",
+   "All 1 routed attempt(s) failed with upstream provider errors (timeout ×1). This is a provider-side failure, not a problem with your request;"
+  ],
+  "skipped_rest": true
+ },
+ {
+  "platform": "google",
+  "model": "gemini-flash-latest",
+  "routed": [],
+  "pings": [
+   {
+    "ok": false,
+    "ms": 60007
+   },
+   {
+    "ok": false,
+    "ms": 60008
+   },
+   {
+    "ok": false,
+    "ms": 1705
+   }
+  ],
+  "quiz": [],
+  "errors": [
+   "All 1 routed attempt(s) failed with upstream provider errors (timeout ×1). This is a provider-side failure, not a problem with your request;",
+   "All 1 routed attempt(s) failed with upstream provider errors (timeout ×1). This is a provider-side failure, not a problem with your request;",
+   "All 1 routed attempt(s) failed with upstream provider errors (upstream_error ×1). This is a provider-side failure, not a problem with your r"
+  ],
+  "skipped_rest": true
+ },
+ {
+  "platform": "router9",
+  "model": "deepseek/deepseek-v4-flash",
+  "routed": [],
+  "pings": [
+   {
+    "ok": false,
+    "ms": 447
+   },
+   {
+    "ok": false,
+    "ms": 4
+   },
+   {
+    "ok": false,
+    "ms": 4
+   }
+  ],
+  "quiz": [],
+  "errors": [
+   "All models rate-limited after 1 attempt. Soonest cooldown reset ~71m. Attempt trail: router9/deepseek/deepseek-v4-flash key1: rate_limited. ",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~74",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~49"
+  ],
+  "skipped_rest": true
+ },
+ {
+  "platform": "router9",
+  "model": "z-ai/glm-5.2",
+  "routed": [],
+  "pings": [
+   {
+    "ok": false,
+    "ms": 277
+   },
+   {
+    "ok": false,
+    "ms": 4
+   },
+   {
+    "ok": false,
+    "ms": 5
+   }
+  ],
+  "quiz": [],
+  "errors": [
+   "All models rate-limited after 1 attempt. Soonest cooldown reset ~23s. Attempt trail: router9/z-ai/glm-5.2 key1: rate_limited. Last error: Ro",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~15",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~7s"
+  ],
+  "skipped_rest": true
+ },
+ {
+  "platform": "router9",
+  "model": "deepseek/deepseek-v4-pro",
+  "routed": [],
+  "pings": [
+   {
+    "ok": false,
+    "ms": 264
+   },
+   {
+    "ok": false,
+    "ms": 5
+   },
+   {
+    "ok": false,
+    "ms": 6
+   }
+  ],
+  "quiz": [],
+  "errors": [
+   "All models rate-limited after 1 attempt. Soonest cooldown reset ~82s. Attempt trail: router9/deepseek/deepseek-v4-pro key1: rate_limited. La",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~57",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~32"
+  ],
+  "skipped_rest": true
+ },
+ {
+  "platform": "router9",
+  "model": "minimax/minimax-m3",
+  "routed": [
+   "electronhub/minimax-m3"
+  ],
+  "pings": [
+   {
+    "ok": true,
+    "ms": 2504
+   },
+   {
+    "ok": true,
+    "ms": 1786
+   },
+   {
+    "ok": true,
+    "ms": 1702
+   }
+  ],
+  "quiz": [
+   true,
+   true,
+   false,
+   true,
+   false,
+   false,
+   false,
+   false
+  ],
+  "errors": [
+   "All models rate-limited after 1 attempt. Soonest cooldown reset ~63s. Attempt trail: electronhub/minimax-m3 key1: rate_limited. Last error: ",
+   "All models exhausted: 2 routes checked (2 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~3",
+   "All models exhausted: 2 routes checked (2 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~1",
+   "All models exhausted: 2 routes checked (2 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~3"
+  ],
+  "tools": false,
+  "ttft_ms": null
+ },
+ {
+  "platform": "openrouter",
+  "model": "dots-studio/dots-3-note-preview:free",
+  "routed": [
+   "kilo/dots-studio/dots-3-note-preview:free"
+  ],
+  "pings": [
+   {
+    "ok": true,
+    "ms": 3650
+   },
+   {
+    "ok": true,
+    "ms": 2596
+   },
+   {
+    "ok": false,
+    "ms": 7704
+   }
+  ],
+  "quiz": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "errors": [
+   "risposta errata: '\\n\\n2E90'"
+  ],
+  "tools": true,
+  "ttft_ms": 3395
+ },
+ {
+  "platform": "nvidia",
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "routed": [
+   "nvidia/nvidia/nemotron-3-ultra-550b-a55b"
+  ],
+  "pings": [
+   {
+    "ok": true,
+    "ms": 2566
+   },
+   {
+    "ok": true,
+    "ms": 1470
+   },
+   {
+    "ok": true,
+    "ms": 6321
+   }
+  ],
+  "quiz": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "errors": [],
+  "tools": true,
+  "ttft_ms": 1769
+ },
+ {
+  "platform": "nvidia",
+  "model": "poolside/laguna-xs-2.1",
+  "routed": [
+   "nvidia/poolside/laguna-xs-2.1"
+  ],
+  "pings": [
+   {
+    "ok": true,
+    "ms": 295
+   },
+   {
+    "ok": true,
+    "ms": 186
+   },
+   {
+    "ok": true,
+    "ms": 200
+   }
+  ],
+  "quiz": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "errors": [],
+  "tools": true,
+  "ttft_ms": 169
+ },
+ {
+  "platform": "cohere",
+  "model": "command-a-plus-05-2026",
+  "routed": [
+   "cohere/command-a-plus-05-2026"
+  ],
+  "pings": [
+   {
+    "ok": true,
+    "ms": 930
+   },
+   {
+    "ok": true,
+    "ms": 457
+   },
+   {
+    "ok": true,
+    "ms": 568
+   }
+  ],
+  "quiz": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "errors": [],
+  "tools": true,
+  "ttft_ms": 309
+ },
+ {
+  "platform": "cohere",
+  "model": "north-mini-code-1-0",
+  "routed": [
+   "cohere/north-mini-code-1-0"
+  ],
+  "pings": [
+   {
+    "ok": true,
+    "ms": 517
+   },
+   {
+    "ok": true,
+    "ms": 1381
+   },
+   {
+    "ok": true,
+    "ms": 606
+   }
+  ],
+  "quiz": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "errors": [],
+  "tools": true,
+  "ttft_ms": 371
+ },
+ {
+  "platform": "cohere",
+  "model": "command-a-reasoning-08-2025",
+  "routed": [
+   "cohere/command-a-reasoning-08-2025"
+  ],
+  "pings": [
+   {
+    "ok": true,
+    "ms": 2634
+   },
+   {
+    "ok": true,
+    "ms": 3823
+   },
+   {
+    "ok": true,
+    "ms": 3422
+   }
+  ],
+  "quiz": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "errors": [],
+  "tools": true,
+  "ttft_ms": 2389
+ },
+ {
+  "platform": "zhipu",
+  "model": "glm-4.7-flash",
+  "routed": [
+   "cloudflare/@cf/zai-org/glm-4.7-flash",
+   "zhipu/glm-4.7-flash"
+  ],
+  "pings": [
+   {
+    "ok": true,
+    "ms": 2563
+   },
+   {
+    "ok": true,
+    "ms": 4161
+   },
+   {
+    "ok": true,
+    "ms": 5025
+   }
+  ],
+  "quiz": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "errors": [],
+  "tools": true,
+  "ttft_ms": 2041
+ },
+ {
+  "platform": "electronhub",
+  "model": "qwen3.8-flash",
+  "routed": [
+   "electronhub/qwen3.8-flash"
+  ],
+  "pings": [
+   {
+    "ok": true,
+    "ms": 20425
+   },
+   {
+    "ok": true,
+    "ms": 2017
+   },
+   {
+    "ok": true,
+    "ms": 3296
+   }
+  ],
+  "quiz": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   false
+  ],
+  "errors": [
+   "All models rate-limited after 1 attempt. Soonest cooldown reset ~50s. Attempt trail: electronhub/qwen3.8-flash key1: rate_limited. Last erro"
+  ],
+  "tools": false,
+  "ttft_ms": null
+ },
+ {
+  "platform": "electronhub",
+  "model": "gpt-5.6-luna",
+  "routed": [],
+  "pings": [
+   {
+    "ok": false,
+    "ms": 199
+   },
+   {
+    "ok": false,
+    "ms": 4
+   },
+   {
+    "ok": false,
+    "ms": 4
+   }
+  ],
+  "quiz": [],
+  "errors": [
+   "All models rate-limited after 1 attempt. Soonest cooldown reset ~1s. Attempt trail: electronhub/gpt-5.6-luna key1: rate_limited. Last error:",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~16",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~7s"
+  ],
+  "skipped_rest": true
+ },
+ {
+  "platform": "electronhub",
+  "model": "laguna-s-2.1",
+  "routed": [],
+  "pings": [
+   {
+    "ok": false,
+    "ms": 5881
+   },
+   {
+    "ok": false,
+    "ms": 5
+   },
+   {
+    "ok": false,
+    "ms": 8
+   }
+  ],
+  "quiz": [],
+  "errors": [
+   "All 1 routed attempt(s) failed with upstream provider errors (upstream_error ×1). This is a provider-side failure, not a problem with your r",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~20",
+   "All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~26"
+  ],
+  "skipped_rest": true
+ },
+ {
+  "platform": "mistral",
+  "model": "mistral-code-latest",
+  "routed": [
+   "mistral/mistral-code-latest"
+  ],
+  "pings": [
+   {
+    "ok": true,
+    "ms": 509
+   },
+   {
+    "ok": true,
+    "ms": 295
+   },
+   {
+    "ok": true,
+    "ms": 319
+   }
+  ],
+  "quiz": [
+   true,
+   true,
+   false,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "errors": [],
+  "tools": true,
+  "ttft_ms": 262
+ },
+ {
+  "platform": "llmtr",
+  "model": "qwen/qwen3.8-27b-free",
+  "routed": [
+   "groq/qwen/qwen3.8-27b",
+   "llmtr/qwen/qwen3.8-27b-free"
+  ],
+  "pings": [
+   {
+    "ok": true,
+    "ms": 722
+   },
+   {
+    "ok": true,
+    "ms": 436
+   },
+   {
+    "ok": true,
+    "ms": 302
+   }
+  ],
+  "quiz": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "errors": [],
+  "tools": true,
+  "ttft_ms": 266
+ },
+ {
+  "platform": "kilo",
+  "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "routed": [
+   "kilo/nvidia/nemotron-3-ultra-550b-a55b:free"
+  ],
+  "pings": [
+   {
+    "ok": true,
+    "ms": 5291
+   },
+   {
+    "ok": true,
+    "ms": 1695
+   },
+   {
+    "ok": true,
+    "ms": 22935
+   }
+  ],
+  "quiz": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "errors": [],
+  "tools": true,
+  "ttft_ms": 1274
+ },
+ {
+  "platform": "electronhub",
+  "model": "minimax-m3",
+  "routed": [
+   "electronhub/minimax-m3"
+  ],
+  "pings": [
+   {
+    "ok": true,
+    "ms": 1584
+   },
+   {
+    "ok": true,
+    "ms": 2472
+   },
+   {
+    "ok": true,
+    "ms": 2270
+   }
+  ],
+  "quiz": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "errors": [],
+  "tools": true,
+  "ttft_ms": 3259
+ },
+ {
+  "platform": "electronhub",
+  "model": "deepseek-v4-flash",
+  "routed": [
+   "electronhub/deepseek-v4-flash"
+  ],
+  "pings": [
+   {
+    "ok": false,
+    "ms": 1477
+   },
+   {
+    "ok": true,
+    "ms": 1634
+   },
+   {
+    "ok": true,
+    "ms": 2163
+   }
+  ],
+  "quiz": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "errors": [
+   "risposta errata: '\\n\\nC842D###'"
+  ],
+  "tools": true,
+  "ttft_ms": 1580
+ },
+ {
+  "platform": "cloudflare",
+  "model": "@cf/qwen/qwen3.8-27b",
+  "routed": [
+   "cloudflare/@cf/qwen/qwen3.8-27b"
+  ],
+  "pings": [
+   {
+    "ok": true,
+    "ms": 46362
+   },
+   {
+    "ok": true,
+    "ms": 9862
+   },
+   {
+    "ok": true,
+    "ms": 1577
+   }
+  ],
+  "quiz": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "errors": [],
+  "tools": true,
+  "ttft_ms": 2820
+ },
+ {
+  "platform": "llmtr",
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "routed": [
+   "kilo/nvidia/nemotron-3-ultra-550b-a55b:free"
+  ],
+  "pings": [
+   {
+    "ok": true,
+    "ms": 5029
+   },
+   {
+    "ok": true,
+    "ms": 4653
+   },
+   {
+    "ok": true,
+    "ms": 8369
+   }
+  ],
+  "quiz": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "errors": [],
+  "tools": true,
+  "ttft_ms": 865
+ },
+ {
+  "platform": "ovh",
+  "model": "Qwen3.8-27B",
+  "routed": [
+   "groq/qwen/qwen3.8-27b",
+   "llmtr/qwen/qwen3.8-27b-free",
+   "ovh/Qwen3.8-27B"
+  ],
+  "pings": [
+   {
+    "ok": true,
+    "ms": 755
+   },
+   {
+    "ok": true,
+    "ms": 60519
+   },
+   {
+    "ok": true,
+    "ms": 474
+   }
+  ],
+  "quiz": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "errors": [],
+  "tools": true,
+  "ttft_ms": null
+ }
+]

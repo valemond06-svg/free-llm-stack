@@ -7,7 +7,7 @@ if (-not $env:FREELLMAPI_URL) { $env:FREELLMAPI_URL = 'http://127.0.0.1:31415' }
 function claude-free { npx -y freellmapi launch --url $env:FREELLMAPI_URL @args }
 
 function claude-antigravity {
-    $env:ANTHROPIC_BASE_URL = 'http://localhost:8080'
+    $env:ANTHROPIC_BASE_URL = 'http://127.0.0.1:3000'
     $env:ANTHROPIC_AUTH_TOKEN = if ($env:ANTIGRAVITY_PROXY_API_KEY) { $env:ANTIGRAVITY_PROXY_API_KEY } else { 'test' }
     $env:ANTHROPIC_MODEL = 'claude-opus-4-6-thinking'
     try { claude @args } finally { Remove-Item Env:ANTHROPIC_BASE_URL, Env:ANTHROPIC_AUTH_TOKEN, Env:ANTHROPIC_MODEL -ErrorAction SilentlyContinue }
