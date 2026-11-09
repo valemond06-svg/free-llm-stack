@@ -146,12 +146,24 @@ def cmd_report(conn, args):
     print("\nKeys per provider: " + ", ".join(f"{k['platform']}={k['n']}" for k in keys))
 
 
+def excluded_ids(conn, rules):
+    """id dei modelli in rules.excluded_models (es. Antigravity): mai in catena e disattivati."""
+    ex = [(e.get("platform"), re.compile(e["pattern"], re.I)) for e in rules.get("excluded_models", [])]
+    return [m["id"] for m in conn.execute("SELECT id, platform, model_id, display_name FROM models").fetchall()
+            if any((plat is None or plat == m["platform"]) and (rx.search(m["model_id"]) or rx.search(m["display_name"] or ""))
+                   for plat, rx in ex)]
+
+
 def cmd_apply(conn, args):
     chain = json.loads(Path(args.chain).read_text(encoding="utf-8"))
     usable = usable_platforms(conn)
+    banned = excluded_ids(conn, chain.get("rules", {}))
     ids, missing = [], []
     for entry in chain["chain"]:
         m = find_model(conn, entry["platform"], entry["model_id"], entry.get("alt_ids", ()))
+        if m and m["id"] in banned:
+            print(f"  [excluded     ] {entry['platform']}/{entry['model_id']}")
+            continue
         if not m:
             missing.append(entry)
             continue
@@ -167,7 +179,7 @@ def cmd_apply(conn, args):
         sys.exit("[ERROR] no chain model is usable. Add provider keys in the dashboard first.")
     if not args.dry_run:
         backup(conn, args.db)
-    write_chain(conn, ids, dry_run=args.dry_run)
+    write_chain(conn, ids, disable_ids=banned, dry_run=args.dry_run)
     print(f"\n{'Would apply' if args.dry_run else 'Applied'} {len(ids)} models.")
 
 
@@ -193,9 +205,23 @@ def cmd_auto(conn, args):
     pinned = rules.get("pinned_top", [])
     pinned_keys = {(p["platform"], mid) for p in pinned for mid in (p["model_id"], *p.get("alt_ids", ()))}
 
+    # Modelli esclusi per sempre (es. Antigravity, tolto il 09/11): disattivati e mai in catena, nemmeno se fissati.
+    excluded = [(e.get("platform"), re.compile(e["pattern"], re.I)) for e in rules.get("excluded_models", [])]
+
+    def is_excluded(m):
+        return any((plat is None or plat == m["platform"]) and (rx.search(m["model_id"]) or rx.search(m["display_name"] or ""))
+                   for plat, rx in excluded)
+
+    pinned = [p for p in pinned if not any((plat is None or plat == p["platform"]) and
+                                           any(rx.search(mid) for mid in (p["model_id"], *p.get("alt_ids", ())))
+                                           for plat, rx in excluded)]
+
     rejected, candidates = [], []
     for m in conn.execute("SELECT * FROM models").fetchall():
         key = (m["platform"], m["model_id"])
+        if is_excluded(m):
+            rejected.append((m, "escluso da excluded_models"))
+            continue
         if key in pinned_keys:
             continue
         if m["platform"] not in usable:

@@ -2,25 +2,9 @@
   "_comment": "Catena 'auto' consigliata (ottobre 2026), dal setup di riferimento. Ordine = priorità. Usata da: python scripts/curator.py apply. Le regole sotto sono usate da: python scripts/curator.py auto. alt_ids = stesso modello con i nomi di un altro proxy (es. frieser/antigravity-proxy espone gli id senza prefisso).",
   "chain": [
     {
-      "platform": "custom",
-      "model_id": "antigravity-claude-opus-4-6-thinking",
-      "alt_ids": [
-        "claude-opus-4-6-thinking"
-      ],
-      "why": "Ragionamento migliore, Antigravity."
-    },
-    {
-      "platform": "custom",
-      "model_id": "antigravity-gemini-3-flash",
-      "alt_ids": [
-        "gemini-3-flash"
-      ],
-      "why": "Forte e veloce (1,4 s), Antigravity."
-    },
-    {
       "platform": "groq",
       "model_id": "qwen/qwen3.8-27b",
-      "why": "Primo non Antigravity: 1 s, circa 435 tok/s, 4 key. Regge il failover."
+      "why": "Primo della catena: 1 s, circa 435 tok/s, 4 key. Regge il failover."
     },
     {
       "platform": "xkiro",
@@ -42,7 +26,6 @@
       "model_id": "qwen/qwen3.8-omni-flash:free",
       "why": "Visione e tool, 503 intermittenti."
     },
-
     {
       "platform": "cloudflare",
       "model_id": "@cf/qwen/qwen3.8-27b",
@@ -150,30 +133,7 @@
     }
   ],
   "rules": {
-    "pinned_top": [
-      {
-        "platform": "custom",
-        "model_id": "antigravity-claude-opus-4-6-thinking",
-        "alt_ids": [
-          "claude-opus-4-6-thinking"
-        ]
-      },
-      {
-        "platform": "custom",
-        "model_id": "antigravity-claude-sonnet-4-6-thinking",
-        "alt_ids": [
-          "claude-sonnet-4-6-thinking",
-          "claude-sonnet-4-6"
-        ]
-      },
-      {
-        "platform": "custom",
-        "model_id": "antigravity-gemini-3-flash",
-        "alt_ids": [
-          "gemini-3-flash"
-        ]
-      }
-    ],
+    "pinned_top": [],
     "non_chat_patterns": [
       "guard",
       "safety",
@@ -213,6 +173,13 @@
     "low_rpm": 2,
     "slow_speed_score": 10,
     "slow_min_position": 6,
-    "min_reliability": 25
+    "min_reliability": 25,
+    "excluded_models": [
+      {
+        "platform": "custom",
+        "pattern": "antigravity|^claude-|^gemini-3-flash$",
+        "why": "Antigravity tolto da tutte le catene il 09/11/2026 (decisione di Valentino): versione rifiutata da Google, account sospesi."
+      }
+    ]
   }
 }

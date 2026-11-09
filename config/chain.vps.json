@@ -2,22 +2,6 @@
   "_comment": "Catena VPS, riordinata dal bench del 3 novembre 2026 (reports/bench-2026-11-03*.json).",
   "chain": [
     {
-      "platform": "custom",
-      "model_id": "antigravity-claude-opus-4-6-thinking",
-      "alt_ids": [
-        "claude-opus-4-6-thinking"
-      ],
-      "why": "Bench 03/11: 8/8, 2,3 s, tool ok."
-    },
-    {
-      "platform": "custom",
-      "model_id": "antigravity-gemini-3-flash",
-      "alt_ids": [
-        "gemini-3-flash"
-      ],
-      "why": "Bench 03/11: 8/8, 1,5 s, tool ok."
-    },
-    {
       "platform": "groq",
       "model_id": "qwen/qwen3.8-27b",
       "why": "Bench 03/11: 8/8, 0,37 s."
@@ -215,30 +199,7 @@
     }
   ],
   "rules": {
-    "pinned_top": [
-      {
-        "platform": "custom",
-        "model_id": "antigravity-claude-opus-4-6-thinking",
-        "alt_ids": [
-          "claude-opus-4-6-thinking"
-        ]
-      },
-      {
-        "platform": "custom",
-        "model_id": "antigravity-claude-sonnet-4-6-thinking",
-        "alt_ids": [
-          "claude-sonnet-4-6-thinking",
-          "claude-sonnet-4-6"
-        ]
-      },
-      {
-        "platform": "custom",
-        "model_id": "antigravity-gemini-3-flash",
-        "alt_ids": [
-          "gemini-3-flash"
-        ]
-      }
-    ],
+    "pinned_top": [],
     "non_chat_patterns": [
       "guard",
       "safety",
@@ -276,6 +237,13 @@
     "low_rpm": 2,
     "slow_speed_score": 10,
     "slow_min_position": 6,
-    "min_reliability": 25
+    "min_reliability": 25,
+    "excluded_models": [
+      {
+        "platform": "custom",
+        "pattern": "antigravity|^claude-|^gemini-3-flash$",
+        "why": "Antigravity tolto da tutte le catene il 09/11/2026 (decisione di Valentino): versione rifiutata da Google, account sospesi."
+      }
+    ]
   }
 }
