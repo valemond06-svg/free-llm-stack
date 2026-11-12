@@ -280,14 +280,19 @@ function authorized(req, cfg) {
 }
 
 async function handleModels(res, cfg) {
-  const r = await fetch(`${cfg.upstream}/v1/models`, { headers: upstreamHeaders(cfg) });
-  if (!r.ok) return openAIError(res, r.status, `upstream /v1/models: ${await r.text()}`);
-  const data = await r.json();
-  const created = Math.floor(Date.now() / 1000);
-  sendJson(res, 200, {
-    object: 'list',
-    data: (data.data || []).map(m => ({ id: `${cfg.prefix}${m.id}`, object: 'model', created, owned_by: 'antigravity' })),
-  });
+  try {
+    const r = await fetch(`${cfg.upstream}/v1/models`, { headers: upstreamHeaders(cfg), signal: AbortSignal.timeout(10000) });
+    if (!r.ok) return openAIError(res, r.status, `upstream /v1/models: ${await r.text()}`);
+    const data = await r.json();
+    const created = Math.floor(Date.now() / 1000);
+    sendJson(res, 200, {
+      object: 'list',
+      data: (data.data || []).map(m => ({ id: `${cfg.prefix}${m.id}`, object: 'model', created, owned_by: 'antigravity' })),
+    });
+  } catch (e) {
+    if (e.name === 'TimeoutError' || e.name === 'AbortError') return openAIError(res, 504, 'upstream /v1/models: timeout');
+    return openAIError(res, 502, 'upstream /v1/models: ' + e.message);
+  }
 }
 
 async function handleChat(req, res, cfg) {
