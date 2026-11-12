@@ -5,7 +5,7 @@ Va lanciato contro un'istanza FreeLLMAPI DI TEST (mai quella di produzione): per
 modello riscrive la catena del DB con curator.py, a turni, così che ogni id instradi su un solo
 provider. Solo libreria standard. Key da FREELLMAPI_API_KEY.
 
-  sudo -E python3 model_bench.py --url http://127.0.0.1:3012 --db /path/copia/freeapi.db \
+  sudo -E python3 model_bench.py --url http://127.0.0.1:3012 --db /tmp/bench/freeapi-bench.db \
        --chain config/chain.vps.json --curator scripts/curator.py --out bench.json
 """
 from __future__ import annotations
@@ -137,13 +137,24 @@ def bench_model(base, entry, pause):
     return res
 
 
-def apply_chain(curator, db, entries):
+def apply_chain(curator, db, entries, rules=None):
     with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False, encoding="utf-8") as f:
-        json.dump({"chain": entries}, f)
-    out = subprocess.run([sys.executable, curator, "apply", "--db", db, "--chain", f.name],
+        json.dump({"chain": entries, "rules": rules or {}}, f)
+    # --no-backup: il DB e' una copia di prova (verificato in main), un backup a ogni turno e' solo rumore.
+    out = subprocess.run([sys.executable, curator, "apply", "--db", db, "--chain", f.name, "--no-backup"],
                          capture_output=True, text=True)
     os.unlink(f.name)
     return out.stdout.strip().splitlines()[-1] if out.stdout else out.stderr[-200:]
+
+
+def is_test_db(path):
+    p = os.path.abspath(path)
+    if re.search(r"test|bench", os.path.basename(p), re.I):
+        return True
+    tmp = [os.path.abspath(tempfile.gettempdir())]
+    tmp += [os.path.abspath(os.environ[k]) for k in ("TMP", "TEMP", "TMPDIR") if os.environ.get(k)]
+    tmp += ["/tmp", "/var/tmp"]
+    return any(os.path.normcase(p).startswith(os.path.normcase(t) + os.sep) for t in tmp)
 
 
 def canonical(db, entries):
@@ -167,18 +178,24 @@ def main():
     ap.add_argument("--curator", required=True)
     ap.add_argument("--out", required=True)
     ap.add_argument("--only", default="")
+    ap.add_argument("--i-know-this-is-a-copy", action="store_true",
+                    help="conferma che --db e' una copia di prova (il nome non contiene test/bench e non e' in una cartella temporanea)")
     ap.add_argument("--isolate", action="store_true", help="un modello per volta, gli altri disattivati")
     a = ap.parse_args()
     if not KEY:
         sys.exit("FREELLMAPI_API_KEY non impostata")
-    entries = json.load(open(a.chain, encoding="utf-8"))["chain"]
+    if not (a.i_know_this_is_a_copy or is_test_db(a.db)):
+        sys.exit(f"RIFIUTO: --db {a.db} non sembra una copia di prova (serve un nome con 'test' o 'bench', "
+                 "una cartella temporanea, oppure --i-know-this-is-a-copy). Il banco spegne i modelli del DB.")
+    cfg = json.load(open(a.chain, encoding="utf-8"))
+    entries, rules = cfg["chain"], cfg.get("rules", {})
     if a.only:
         entries = [e for e in entries if e["model_id"] in a.only.split(",")]
     if a.isolate:
         # Un modello alla volta, tutti gli altri disattivati: nessun id può finire su un altro provider.
         results = []
         for e in entries:
-            apply_chain(a.curator, a.db, [e])
+            apply_chain(a.curator, a.db, [e], rules)
             ids = [e["model_id"], *e.get("alt_ids", [])]
             c = sqlite3.connect(a.db)
             c.execute(f"UPDATE models SET enabled = CASE WHEN platform=? AND model_id IN ({','.join('?' * len(ids))}) "
@@ -209,7 +226,7 @@ def main():
         rounds[k].append(e)
     results = []
     for i, rnd in enumerate(rounds, 1):
-        print(f"[turno {i}/{len(rounds)}] {len(rnd)} modelli - {apply_chain(a.curator, a.db, rnd)}", flush=True)
+        print(f"[turno {i}/{len(rounds)}] {len(rnd)} modelli - {apply_chain(a.curator, a.db, rnd, rules)}", flush=True)
         time.sleep(5)
         by_platform: dict = {}
         for e in rnd:

@@ -177,7 +177,7 @@ def cmd_apply(conn, args):
               "(renamed/retired, or custom endpoint not added yet)")
     if not ids:
         sys.exit("[ERROR] no chain model is usable. Add provider keys in the dashboard first.")
-    if not args.dry_run:
+    if not args.dry_run and not args.no_backup:
         backup(conn, args.db)
     write_chain(conn, ids, disable_ids=banned, dry_run=args.dry_run)
     print(f"\n{'Would apply' if args.dry_run else 'Applied'} {len(ids)} models.")
@@ -318,6 +318,8 @@ def main():
     ap.add_argument("--db", type=Path, default=None)
     ap.add_argument("--chain", default=str(DEFAULT_CHAIN), help="chain/rules JSON (default config/chain.json)")
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--no-backup", action="store_true",
+                    help="apply: salta il backup del DB (solo per DB di prova, es. model_bench)")
     args = ap.parse_args()
     args.db = (args.db or default_db_path()).resolve()
     if hasattr(sys.stdout, "reconfigure"):

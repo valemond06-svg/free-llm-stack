@@ -236,7 +236,14 @@ export function createStreamConverter(requestedModel, includeUsage, write) {
         handle(event);
       }
     },
-    end() { finishStream(); },
+    end() {
+      // Stream chiuso senza message_stop: il testo e' troncato, non va presentato come completo.
+      if (done) return;
+      done = true;
+      write(`data: ${JSON.stringify({ error: { message: 'stream upstream interrotto', type: 'upstream_error' } })}
+
+`);
+    },
   };
 }
 
