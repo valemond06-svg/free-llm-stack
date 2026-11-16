@@ -3,7 +3,16 @@
 
 $FreeLlmStack = Split-Path -Parent $PSScriptRoot
 if (-not $env:FREELLMAPI_URL) { $env:FREELLMAPI_URL = 'http://100.119.96.109:3011' }  # VPS Tailscale default; fallback locale: 127.0.0.1:31415
-if (-not $env:FREELLMAPI_API_KEY) { $env:FREELLMAPI_API_KEY = 'freellmapi-...' }
+if (-not $env:FREELLMAPI_API_KEY -or $env:FREELLMAPI_API_KEY -eq 'freellmapi-...') {
+    $userKey = [System.Environment]::GetEnvironmentVariable('FREELLMAPI_API_KEY', 'User')
+    if ($userKey -and $userKey -ne 'freellmapi-...') {
+        $env:FREELLMAPI_API_KEY = $userKey
+    } elseif (Test-Path "$env:USERPROFILE\.config\free-llm-stack\api-key.bak") {
+        $env:FREELLMAPI_API_KEY = (Get-Content "$env:USERPROFILE\.config\free-llm-stack\api-key.bak" | Select-String -Pattern '^freellmapi-[0-9a-f]{32,}' | Select-Object -First 1).Line.Trim()
+    } else {
+        $env:FREELLMAPI_API_KEY = 'freellmapi-cc65ebfe697a3ec347fe49caa397e12c33d576fcae39b726'
+    }
+}
 
 function claude-free {
     $env:ANTHROPIC_BASE_URL = $env:FREELLMAPI_URL
