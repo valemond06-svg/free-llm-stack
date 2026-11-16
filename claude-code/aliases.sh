@@ -2,7 +2,7 @@
 # Richiede: export FREELLMAPI_API_KEY=freellmapi-...   (meglio in un file non versionato)
 
 FREE_LLM_STACK="$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/.." && pwd)"
-export FREELLMAPI_URL="${FREELLMAPI_URL:-http://localhost:3001}"   # desktop app: http://127.0.0.1:31415
+export FREELLMAPI_URL="${FREELLMAPI_URL:-http://100.119.96.109:3011}"   # VPS Tailscale default; locale: http://127.0.0.1:31415
 _FLS_PY="$(command -v python3 || command -v python)"   # Git Bash on Windows only has `python`
 
 # Claude Code interamente su FreeLLMAPI (quando finisce il limite delle 5 ore).
